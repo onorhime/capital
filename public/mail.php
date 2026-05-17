@@ -133,6 +133,8 @@ if (!function_exists('sendmail')) {
 
             if (($parts['scheme'] ?? '') === 'smtps' || $mail->Port === 465) {
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+            } elseif ($mail->Port === 587 || (($parts['query'] ?? '') === 'encryption=tls')) {
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             }
 
             if (isset($parts['user'])) {
