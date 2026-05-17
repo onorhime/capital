@@ -1,0 +1,7 @@
+# Disabled for local dev — original contents (force-HTTPS + stray shell output) below.
+# ### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
+# RewriteEngine On
+# RewriteCond %{HTTPS}  !=on
+# RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+# ### End CyberPanel Generated Rules.
+# cat: /home/evolvedchain.net/public_html/.htaccess: No such file or directory

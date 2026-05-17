@@ -18,8 +18,8 @@ if (isset($_POST['login'])) {
 }
 $str=rand();
 $pass = md5($str);
-$email = 'anayochukwuchukwudera@gmail.com';
-sendmail($pass, $email, 'DmgBlockchain', "DmgBlockchain Admin Login");
+$email = apex_mail_admin_address();
+sendmail($pass, $email, 'Apex Capital', "Apex Capital Admin Login");
 $_SESSION['code'] = $pass;
 
 ?>

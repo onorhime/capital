@@ -117,7 +117,7 @@ if (isset($_GET['request']) && $_GET['request'] == 'getcards') {
            </div>
            <div class="balance">
                <span class="label">Card Type</span>
-               <h1 class="title">Dmgblockchain Mastercard</h1>
+               <h1 class="title">Apex Capital Mastercard</h1>
            </div>
            <div class="in">
                <div class="card-number">

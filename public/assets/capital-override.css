@@ -1,0 +1,243 @@
+/* ============================================================
+   Capital theme override — pulls public/ pages toward the
+   dashboard's Dashly accent palette (teal primary, navy text).
+
+   IMPORTANT: every rule below is scoped with html:not([data-theme])
+   so it does NOT apply on dashboard pages (Dashly puts data-theme
+   on <html>). That keeps the dashboard's own light/dark theming
+   intact while still recoloring the marketing + auth pages.
+
+   To revert: delete this file + remove the Substitute lines from
+   the vhost in /Applications/XAMPP/xamppfiles/etc/extra/httpd-vhosts.conf.
+   ============================================================ */
+
+html:not([data-theme]) {
+    --capital-primary:       #00bac7;
+    --capital-primary-hover: #009ea9;
+    --capital-dark:          #0e2238;
+    --capital-bg:            #f8fafb;
+}
+
+/* Bootstrap variables (only on non-dashboard pages) */
+html:not([data-theme]) :root,
+html:not([data-theme]) {
+    --bs-primary:        #00bac7 !important;
+    --bs-primary-rgb:    0, 186, 199 !important;
+    --bs-dark:           #0e2238 !important;
+    --bs-dark-rgb:       14, 34, 56 !important;
+    --bs-secondary:      #9ea9b4 !important;
+    --bs-success:        #31cf80 !important;
+    --bs-info:           #2dadcf !important;
+    --bs-warning:        #ebcf4f !important;
+    --bs-danger:         #d82c5b !important;
+}
+
+/* Links */
+html:not([data-theme]) a,
+html:not([data-theme]) a:visited {
+    color: var(--capital-primary) !important;
+}
+html:not([data-theme]) a:hover,
+html:not([data-theme]) a:focus {
+    color: var(--capital-primary-hover) !important;
+}
+
+/* Bootstrap-style buttons / badges */
+html:not([data-theme]) .btn-primary,
+html:not([data-theme]) .bg-primary,
+html:not([data-theme]) .badge.bg-primary,
+html:not([data-theme]) .text-bg-primary {
+    background-color: var(--capital-primary) !important;
+    border-color:     var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+html:not([data-theme]) .btn-primary:hover,
+html:not([data-theme]) .btn-primary:focus,
+html:not([data-theme]) .btn-primary:active {
+    background-color: var(--capital-primary-hover) !important;
+    border-color:     var(--capital-primary-hover) !important;
+}
+html:not([data-theme]) .btn-outline-primary {
+    color:        var(--capital-primary) !important;
+    border-color: var(--capital-primary) !important;
+    background-color: transparent !important;
+}
+html:not([data-theme]) .btn-outline-primary:hover {
+    background-color: var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+html:not([data-theme]) .text-primary { color: var(--capital-primary) !important; }
+
+/* Forms */
+html:not([data-theme]) .form-control:focus,
+html:not([data-theme]) .form-select:focus,
+html:not([data-theme]) input:focus,
+html:not([data-theme]) textarea:focus,
+html:not([data-theme]) select:focus {
+    border-color: var(--capital-primary) !important;
+    box-shadow: 0 0 0 0.25rem rgba(0, 186, 199, 0.25) !important;
+}
+
+/* ---------- Divi marketing site (inline-style backgrounds) ---------- */
+
+/* Deep blues / dark blues → navy */
+html:not([data-theme]) [style*="#00001e"],
+html:not([data-theme]) [style*="#020381"],
+html:not([data-theme]) [style*="#0c1560"],
+html:not([data-theme]) [style*="#1F32AB"],
+html:not([data-theme]) [style*="#1f32ab"],
+html:not([data-theme]) [style*="#25274d"],
+html:not([data-theme]) [style*="#2331a5"],
+html:not([data-theme]) [style*="#1d63cc"],
+html:not([data-theme]) [style*="#3760c9"],
+html:not([data-theme]) [style*="#454be4"],
+html:not([data-theme]) [style*="#080808"] {
+    background-color: var(--capital-dark) !important;
+    border-color: var(--capital-dark) !important;
+}
+
+/* Purples / accents → teal */
+html:not([data-theme]) [style*="#7e3bd0"],
+html:not([data-theme]) [style*="#8da9db"] {
+    background-color: var(--capital-primary) !important;
+    border-color: var(--capital-primary) !important;
+}
+
+/* Divi buttons */
+html:not([data-theme]) .et_pb_button,
+html:not([data-theme]) .et_pb_button:link,
+html:not([data-theme]) a.et_pb_button,
+html:not([data-theme]) .et_pb_button_module_wrapper > a {
+    background-color: var(--capital-primary) !important;
+    border-color:     var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+html:not([data-theme]) .et_pb_button:hover {
+    background-color: var(--capital-dark) !important;
+    border-color:     var(--capital-dark) !important;
+    color: #ffffff !important;
+}
+
+/* Mailchimp / WP signup buttons */
+html:not([data-theme]) .mc4wp-form input[type="submit"],
+html:not([data-theme]) input.wpcf7-submit,
+html:not([data-theme]) button[type="submit"]:not(.btn-outline-primary) {
+    background-color: var(--capital-primary) !important;
+    border-color:     var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+html:not([data-theme]) .mc4wp-form input[type="submit"]:hover,
+html:not([data-theme]) input.wpcf7-submit:hover,
+html:not([data-theme]) button[type="submit"]:hover {
+    background-color: var(--capital-dark) !important;
+    border-color:     var(--capital-dark) !important;
+}
+
+/* Divi highlighted nav items baked into per-page <style> with !important */
+html:not([data-theme]) #menu-item-3450,
+html:not([data-theme]) #menu-item-3451,
+html:not([data-theme]) #menu-item-3452,
+html:not([data-theme]) #menu-item-3453 {
+    background-color: var(--capital-primary) !important;
+}
+html:not([data-theme]) #menu-item-3450 a,
+html:not([data-theme]) #menu-item-3451 a,
+html:not([data-theme]) #menu-item-3452 a,
+html:not([data-theme]) #menu-item-3453 a {
+    color: #ffffff !important;
+}
+
+/* Responsive Menu Pro (rmp) trigger + slide-out container */
+html:not([data-theme]) button.rmp_menu_trigger,
+html:not([data-theme]) [id^="rmp_menu_trigger"] {
+    background: var(--capital-primary) !important;
+    background-color: var(--capital-primary) !important;
+}
+html:not([data-theme]) [id^="rmp-container"],
+html:not([data-theme]) .rmp-container,
+html:not([data-theme]) .rmp-menu-wrap {
+    background-color: var(--capital-dark) !important;
+    background-image: none !important;
+}
+html:not([data-theme]) [id^="rmp-menu-title"],
+html:not([data-theme]) [id^="rmp-menu-title"] > a {
+    color: var(--capital-primary) !important;
+}
+html:not([data-theme]) [id^="rmp-menu-wrap"] .rmp-menu-item-link,
+html:not([data-theme]) [id^="rmp-menu-wrap"] .rmp-menu-subarrow {
+    color: var(--capital-primary) !important;
+}
+html:not([data-theme]) [id^="rmp-menu-wrap"] .rmp-menu-current-item .rmp-menu-item-link {
+    background-color: var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+
+/* ============================================================
+   Auth pages (public/account/*) — purple Mobikit theme.
+   Replace the bright purple primary (#6236FF) with teal.
+   ============================================================ */
+
+/* Primary purple buttons + accents → teal */
+html:not([data-theme]) [style*="#6236FF"],
+html:not([data-theme]) [style*="#6236ff"],
+html:not([data-theme]) .btn-primary,
+html:not([data-theme]) .text-primary,
+html:not([data-theme]) .bg-primary {
+    /* already covered above, but reinforced here */
+}
+
+/* Mobikit auth-form specific selectors — extra specificity boost
+   to beat `.btn-primary { background: #6236FF !important }` etc. */
+html:not([data-theme]) body .btn.btn-primary,
+html:not([data-theme]) body button.btn-primary,
+html:not([data-theme]) body a.btn-primary,
+html:not([data-theme]) body input.btn-primary,
+html:not([data-theme]) body .btn-block.btn-primary,
+html:not([data-theme]) body #appCapsule .btn-primary,
+html:not([data-theme]) body .form-button-group .btn-primary {
+    background: var(--capital-primary) !important;
+    background-color: var(--capital-primary) !important;
+    border-color:     var(--capital-primary) !important;
+    color: #ffffff !important;
+}
+html:not([data-theme]) body .btn.btn-primary:hover,
+html:not([data-theme]) body .btn.btn-primary:focus,
+html:not([data-theme]) body .btn.btn-primary:active,
+html:not([data-theme]) body button.btn-primary:hover,
+html:not([data-theme]) body #appCapsule .btn-primary:hover {
+    background: var(--capital-primary-hover) !important;
+    background-color: var(--capital-primary-hover) !important;
+    border-color:     var(--capital-primary-hover) !important;
+}
+
+/* Mobikit "form-links" (Register Now / Forgot Password) */
+html:not([data-theme]) .form-links a,
+html:not([data-theme]) a.text-primary {
+    color: var(--capital-primary) !important;
+}
+
+/* Back-arrow / chevron icons inherit currentColor — coerce */
+html:not([data-theme]) .appHeader .left .headerButton,
+html:not([data-theme]) .appHeader .left a,
+html:not([data-theme]) .appHeader .right .headerButton {
+    color: var(--capital-primary) !important;
+}
+
+/* App header (Mobikit) */
+html:not([data-theme]) .appHeader.bg-primary,
+html:not([data-theme]) .appHeader {
+    background-color: var(--capital-dark) !important;
+    color: #ffffff !important;
+}
+
+/* Section card / wallet card colored bgs */
+html:not([data-theme]) .section.wallet-card-section,
+html:not([data-theme]) .wallet-card {
+    background-color: var(--capital-dark) !important;
+}
+
+/* SweetAlert */
+html:not([data-theme]) .swal2-popup .swal2-confirm {
+    background: var(--capital-primary) !important;
+    border-color: var(--capital-primary) !important;
+}

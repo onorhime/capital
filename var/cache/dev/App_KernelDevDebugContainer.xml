@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">C:\xampp\htdocs\evolve</parameter>
+    <parameter key="kernel.project_dir">/Applications/XAMPP/xamppfiles/htdocs/capital</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.runtime_environment">%env(default:kernel.environment:APP_RUNTIME_ENV)%</parameter>
     <parameter key="kernel.runtime_mode">%env(query_string:default:container.runtime_mode:APP_RUNTIME_MODE)%</parameter>
@@ -9,9 +9,9 @@
     <parameter key="kernel.runtime_mode.cli">%env(not:default:kernel.runtime_mode.web:)%</parameter>
     <parameter key="kernel.runtime_mode.worker">%env(bool:default::key:worker:default:kernel.runtime_mode:)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:\xampp\htdocs\evolve\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">C:\xampp\htdocs\evolve\var\cache\dev</parameter>
-    <parameter key="kernel.logs_dir">C:\xampp\htdocs\evolve\var\log</parameter>
+    <parameter key="kernel.build_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="MakerBundle">Symfony\Bundle\MakerBundle\MakerBundle</parameter>
@@ -26,49 +26,49 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\symfony\framework-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\symfony\maker-bundle\src</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\symfony\twig-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-migrations-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\symfony\security-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\symfony\web-profiler-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/web-profiler-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="FlasherSymfonyBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony</parameter>
         <parameter key="namespace">Flasher\Symfony</parameter>
       </parameter>
       <parameter key="FlasherNotySymfonyBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-noty-symfony</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-noty-symfony</parameter>
         <parameter key="namespace">Flasher\Noty\Symfony</parameter>
       </parameter>
       <parameter key="KnpPaginatorBundle" type="collection">
-        <parameter key="path">C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle</parameter>
+        <parameter key="path">/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle</parameter>
         <parameter key="namespace">Knp\Bundle\PaginatorBundle</parameter>
       </parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">App_KernelDevDebugContainer</parameter>
-    <parameter key="upload_directory">C:\xampp\htdocs\evolve/public/uploads</parameter>
+    <parameter key="upload_directory">/Applications/XAMPP/xamppfiles/htdocs/capital/public/uploads</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -99,17 +99,17 @@
     <parameter key="asset.request_context.base_path">null</parameter>
     <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="translator.logging">false</parameter>
-    <parameter key="translator.default_path">C:\xampp\htdocs\evolve/translations</parameter>
+    <parameter key="translator.default_path">/Applications/XAMPP/xamppfiles/htdocs/capital/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\xampp\htdocs\evolve\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
-    <parameter key="router.cache_dir">C:\xampp\htdocs\evolve\var\cache\dev</parameter>
+    <parameter key="router.cache_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="cache.prefix.seed">_C:\xampp\htdocs\evolve.App_KernelDevDebugContainer</parameter>
+    <parameter key="cache.prefix.seed">_/Applications/XAMPP/xamppfiles/htdocs/capital.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
       <parameter key="cache_limiter" type="string">0</parameter>
@@ -122,11 +122,11 @@
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\xampp\htdocs\evolve\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/profiler</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">C:\xampp\htdocs\evolve/templates</parameter>
+    <parameter key="twig.default_path">/Applications/XAMPP/xamppfiles/htdocs/capital/templates</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
     <parameter key="doctrine.data_collector.class">Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector</parameter>
     <parameter key="doctrine.dbal.connection.event_manager.class">Symfony\Bridge\Doctrine\ContainerAwareEventManager</parameter>
@@ -191,7 +191,7 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\xampp\htdocs\evolve\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -290,7 +290,7 @@
       <tag name="routing.route_loader"/>
     </service>
     <service id="App\Service\EmailSender" class="App\Service\EmailSender" autowire="true" autoconfigure="true">
-      <argument type="service" id="mailer.mailer"/>
+      <tag name="container.error" message="Cannot autowire service &quot;App\Service\EmailSender&quot;: argument &quot;$mailFromAddress&quot; of method &quot;__construct()&quot; is type-hinted &quot;string&quot;, you should configure its value explicitly."/>
     </service>
     <service id="App\EventListener\AuthenticationExceptionListener" class="App\EventListener\AuthenticationExceptionListener" autowire="true" autoconfigure="true">
       <argument type="service" id="router.default"/>
@@ -335,9 +335,6 @@
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
-    <service id="App\Services\EmailSender" class="App\Services\EmailSender" autowire="true" autoconfigure="true">
-      <tag name="container.error" message="The autoloader expected class &quot;App\Services\EmailSender&quot; to be defined in file &quot;C:\xampp\htdocs\evolve\vendor\composer/../../src\Services\EmailSender.php&quot;. The file was found but the class was not in it, the class name or namespace probably has a typo."/>
-    </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="argument_resolver.backed_enum_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">
       <tag priority="100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">controller.argument_value_resolver</tag>
@@ -361,7 +358,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.W43kLzC"/>
+      <argument type="service" id=".service_locator.NqCIHjE"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -442,7 +439,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/http_cache</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -452,7 +449,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -642,7 +639,7 @@
       </argument>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument type="service">
         <service>
           <argument type="service" id="request_stack"/>
@@ -678,7 +675,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -852,7 +849,7 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument>dev</argument>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <call method="setName">
         <argument>debug:dotenv</argument>
       </call>
@@ -901,15 +898,15 @@
       <argument type="service" id="translator.data_collector"/>
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
-      <argument>C:\xampp\htdocs\evolve/translations</argument>
-      <argument>C:\xampp\htdocs\evolve/templates</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/translations</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bridge/Resources/views/Email</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -926,15 +923,15 @@
       <argument type="service" id="translation.reader"/>
       <argument type="service" id="translation.extractor"/>
       <argument>en</argument>
-      <argument>C:\xampp\htdocs\evolve/translations</argument>
-      <argument>C:\xampp\htdocs\evolve/templates</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/translations</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations</argument>
-        <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations</argument>
       </argument>
       <argument type="collection">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bridge/Resources/views/Email</argument>
       </argument>
       <argument type="collection"/>
       <call method="setName">
@@ -1111,7 +1108,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1130,7 +1127,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/app</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -1296,7 +1293,7 @@
     </service>
     <service id="mailer.transports" class="Symfony\Component\Mailer\Transport\Transports">
       <argument type="collection">
-        <argument key="main">smtp://support@evolvedchain.net:jHukNq^bjHwY@mail.blocktechltd.org:465</argument>
+        <argument key="main">%env(MAILER_DSN)%</argument>
       </argument>
       <factory service="mailer.transport_factory" method="fromStrings"/>
     </service>
@@ -1304,7 +1301,7 @@
       <argument type="tagged_iterator" tag="mailer.transport_factory"/>
     </service>
     <service id="mailer.default_transport" class="Symfony\Component\Mailer\Transport\TransportInterface">
-      <argument>smtp://support@evolvedchain.net:jHukNq^bjHwY@mail.blocktechltd.org:465</argument>
+      <argument>%env(MAILER_DSN)%</argument>
       <factory service="mailer.transport_factory" method="fromString"/>
     </service>
     <service id="mailer.messenger.message_handler" class="Symfony\Component\Mailer\Messenger\MessageHandler">
@@ -1407,245 +1404,245 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\evolve\var\cache\dev/translations</argument>
+        <argument key="cache_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.af.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.af.xlf</argument>
           </argument>
           <argument key="ar" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ar.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations\flasher.ar.php</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ar.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ar.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations/flasher.ar.php</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ar.xliff</argument>
           </argument>
           <argument key="az" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.az.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.az.xlf</argument>
           </argument>
           <argument key="be" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.be.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.be.xlf</argument>
           </argument>
           <argument key="bg" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.bg.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.bg.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.bg.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.bg.xliff</argument>
           </argument>
           <argument key="bs" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.bs.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.bs.xlf</argument>
           </argument>
           <argument key="ca" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ca.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ca.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ca.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ca.xliff</argument>
           </argument>
           <argument key="cs" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.cs.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.cs.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.cs.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.cs.xliff</argument>
           </argument>
           <argument key="cy" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.cy.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.cy.xlf</argument>
           </argument>
           <argument key="da" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.da.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.da.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.da.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.da.xliff</argument>
           </argument>
           <argument key="de" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.de.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.de.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.de.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.de.xliff</argument>
           </argument>
           <argument key="el" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.el.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.el.xlf</argument>
           </argument>
           <argument key="en" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.en.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations\flasher.en.php</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.en.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations/flasher.en.php</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.en.xliff</argument>
           </argument>
           <argument key="es" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.es.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.es.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.es.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.es.xliff</argument>
           </argument>
           <argument key="et" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.et.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.et.xlf</argument>
           </argument>
           <argument key="eu" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.eu.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.eu.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.eu.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.eu.xliff</argument>
           </argument>
           <argument key="fa" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.fa.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fa.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.fa.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fa.xliff</argument>
           </argument>
           <argument key="fi" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.fi.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fi.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.fi.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fi.xliff</argument>
           </argument>
           <argument key="fr" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.fr.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations\flasher.fr.php</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.fr.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.fr.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations/flasher.fr.php</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.fr.xliff</argument>
           </argument>
           <argument key="gl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.gl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.gl.xlf</argument>
           </argument>
           <argument key="he" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.he.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.he.xlf</argument>
           </argument>
           <argument key="hr" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.hr.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hr.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.hr.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hr.xliff</argument>
           </argument>
           <argument key="hu" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.hu.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.hu.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.hu.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.hu.xliff</argument>
           </argument>
           <argument key="hy" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.hy.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.hy.xlf</argument>
           </argument>
           <argument key="id" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.id.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.id.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.id.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.id.xliff</argument>
           </argument>
           <argument key="it" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.it.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.it.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.it.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.it.xliff</argument>
           </argument>
           <argument key="ja" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ja.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ja.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ja.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ja.xliff</argument>
           </argument>
           <argument key="lb" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.lb.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.lb.xlf</argument>
           </argument>
           <argument key="lt" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.lt.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.lt.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.lt.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.lt.xliff</argument>
           </argument>
           <argument key="lv" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.lv.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.lv.xlf</argument>
           </argument>
           <argument key="mk" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.mk.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.mk.xlf</argument>
           </argument>
           <argument key="mn" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.mn.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.mn.xlf</argument>
           </argument>
           <argument key="my" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.my.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.my.xlf</argument>
           </argument>
           <argument key="nb" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.nb.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.nb.xlf</argument>
           </argument>
           <argument key="nl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.nl.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.nl.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.nl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.nl.xliff</argument>
           </argument>
           <argument key="nn" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.nn.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.nn.xlf</argument>
           </argument>
           <argument key="no" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.no.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.no.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.no.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.no.xliff</argument>
           </argument>
           <argument key="pl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.pl.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pl.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.pl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pl.xliff</argument>
           </argument>
           <argument key="pt" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.pt.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.pt.xlf</argument>
           </argument>
           <argument key="pt_BR" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.pt_BR.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.pt_BR.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.pt_BR.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.pt_BR.xliff</argument>
           </argument>
           <argument key="ro" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ro.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ro.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ro.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ro.xliff</argument>
           </argument>
           <argument key="ru" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ru.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ru.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ru.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ru.xliff</argument>
           </argument>
           <argument key="sk" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sk.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sk.xlf</argument>
           </argument>
           <argument key="sl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sl.xlf</argument>
           </argument>
           <argument key="sq" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sq.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sq.xlf</argument>
           </argument>
           <argument key="sr_Cyrl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sr_Cyrl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sr_Cyrl.xlf</argument>
           </argument>
           <argument key="sr_Latn" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sr_Latn.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sr_Latn.xlf</argument>
           </argument>
           <argument key="sv" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.sv.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sv.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.sv.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sv.xliff</argument>
           </argument>
           <argument key="th" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.th.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.th.xlf</argument>
           </argument>
           <argument key="tl" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.tl.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.tl.xlf</argument>
           </argument>
           <argument key="tr" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.tr.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.tr.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.tr.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.tr.xliff</argument>
           </argument>
           <argument key="uk" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.uk.xlf</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.uk.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.uk.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.uk.xliff</argument>
           </argument>
           <argument key="ur" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.ur.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.ur.xlf</argument>
           </argument>
           <argument key="uz" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.uz.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.uz.xlf</argument>
           </argument>
           <argument key="vi" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.vi.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.vi.xlf</argument>
           </argument>
           <argument key="zh_CN" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.zh_CN.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.zh_CN.xlf</argument>
           </argument>
           <argument key="zh_TW" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations\security.zh_TW.xlf</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations/security.zh_TW.xlf</argument>
           </argument>
           <argument key="ky" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.ky.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.ky.xliff</argument>
           </argument>
           <argument key="sw" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations\KnpPaginatorBundle.sw.xliff</argument>
+            <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations/KnpPaginatorBundle.sw.xliff</argument>
           </argument>
         </argument>
         <argument key="scanned_directories" type="collection">
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\framework-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\maker-bundle\src/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\symfony\web-profiler-bundle/translations</argument>
-          <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-noty-symfony/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-core/Resources/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-symfony/Resources/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/framework-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/maker-bundle/src/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-migrations-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/web-profiler-bundle/translations</argument>
+          <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/php-flasher/flasher-noty-symfony/translations</argument>
         </argument>
         <argument key="cache_vary" type="collection">
           <argument key="scanned_directories" type="collection">
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-core/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-symfony/Resources/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/translations</argument>
+            <argument>vendor/symfony/security-core/Resources/translations</argument>
+            <argument>vendor/php-flasher/flasher-symfony/Resources/translations</argument>
+            <argument>vendor/knplabs/knp-paginator-bundle/translations</argument>
             <argument>translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\framework-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\maker-bundle\src/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-migrations-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\symfony\web-profiler-bundle/translations</argument>
-            <argument>C:\xampp\htdocs\evolve\vendor\php-flasher\flasher-noty-symfony/translations</argument>
+            <argument>vendor/symfony/framework-bundle/translations</argument>
+            <argument>vendor/symfony/maker-bundle/src/translations</argument>
+            <argument>vendor/symfony/twig-bundle/translations</argument>
+            <argument>vendor/doctrine/doctrine-bundle/translations</argument>
+            <argument>vendor/doctrine/doctrine-migrations-bundle/translations</argument>
+            <argument>vendor/symfony/security-bundle/translations</argument>
+            <argument>vendor/symfony/web-profiler-bundle/translations</argument>
+            <argument>vendor/php-flasher/flasher-noty-symfony/translations</argument>
           </argument>
         </argument>
       </argument>
@@ -1906,7 +1903,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\ErrorHandler\ErrorRenderer\FileLinkFormatter">
       <argument>%env(default::SYMFONY_IDE)%</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument type="service_closure" id="debug.file_link_formatter.url_format"/>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch" public="true">
@@ -2417,7 +2414,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.W43kLzC"/>
+      <argument type="service" id=".service_locator.NqCIHjE"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver">
       <call method="addLoader">
@@ -2512,7 +2509,7 @@
       <argument type="service" id=".service_locator.PvoQzFT.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\xampp\htdocs\evolve\var\cache\dev</argument>
+        <argument key="cache_dir">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -2550,7 +2547,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -2578,7 +2575,7 @@
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>C:\xampp\htdocs\evolve/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/config/secrets/%env(default:kernel.environment:APP_RUNTIME_ENV)%</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString" constructor="fromCallable">
@@ -2586,7 +2583,7 @@
       <argument>base64:default::SYMFONY_DECRYPTION_SECRET</argument>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>C:\xampp\htdocs\evolve/.env.dev.local</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/.env.dev.local</argument>
     </service>
     <service id="property_info" class="Symfony\Component\PropertyInfo\PropertyInfoExtractor">
       <argument type="iterator">
@@ -2658,7 +2655,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/sessions</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -2767,7 +2764,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:\xampp\htdocs\evolve\var\cache\dev/profiler</argument>
+      <argument>file:/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -2826,7 +2823,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id=".virtual_request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -2912,8 +2909,8 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
-      <argument>C:\xampp\htdocs\evolve/templates</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder">
       <argument>App</argument>
@@ -3085,7 +3082,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration">
       <tag name="maker.command"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument type="service" id="maker.file_link_formatter"/>
     </service>
     <service id="maker.maker.make_stimulus_controller" class="Symfony\Bundle\MakerBundle\Maker\MakeStimulusController">
@@ -3118,7 +3115,7 @@
       <tag name="container.preload" class="Twig\TemplateWrapper"/>
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="cache">C:\xampp\htdocs\evolve\var\cache\dev/twig</argument>
+        <argument key="cache">/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -3207,9 +3204,9 @@
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator">
       <argument type="service" id="kernel"/>
       <argument type="collection">
-        <argument key="C:\xampp\htdocs\evolve\vendor\symfony\twig-bridge/Resources/views/Email">email</argument>
+        <argument key="/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bridge/Resources/views/Email">email</argument>
       </argument>
-      <argument>C:\xampp\htdocs\evolve/templates</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
       <argument type="collection">
         <argument>*.twig</argument>
       </argument>
@@ -3223,56 +3220,56 @@
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader">
       <tag name="twig.loader"/>
       <argument type="collection"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-bundle/templates</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-bundle/templates</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-bundle/templates</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-bundle/templates</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\doctrine\doctrine-migrations-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/doctrine/doctrine-migrations-bundle/Resources/views</argument>
         <argument>!DoctrineMigrations</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\security-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/security-bundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\web-profiler-bundle/Resources/views</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/web-profiler-bundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/templates</argument>
         <argument>KnpPaginator</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\knplabs\knp-paginator-bundle/templates</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/knplabs/knp-paginator-bundle/templates</argument>
         <argument>!KnpPaginator</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve/templates</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>email</argument>
       </call>
       <call method="addPath">
-        <argument>C:\xampp\htdocs\evolve\vendor\symfony\twig-bridge/Resources/views/Email</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/vendor/symfony/twig-bridge/Resources/views/Email</argument>
         <argument>!email</argument>
       </call>
     </service>
@@ -3367,9 +3364,9 @@
       <tag name="console.command"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="twig"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument>%kernel.bundles_metadata%</argument>
-      <argument>C:\xampp\htdocs\evolve/templates</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/templates</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
       <call method="setName">
         <argument>debug:twig</argument>
@@ -3541,14 +3538,13 @@
     </service>
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection" public="true">
       <argument type="collection">
-        <argument key="dbname">express</argument>
-        <argument key="charset">utf8</argument>
-        <argument key="user">general</argument>
-        <argument key="password">.lxG5mEBFVauw[OP</argument>
-        <argument key="driver">pdo_mysql</argument>
-        <argument key="port">3306</argument>
+        <argument key="url">%env(resolve:DATABASE_URL)%</argument>
         <argument key="use_savepoints">true</argument>
+        <argument key="driver">pdo_mysql</argument>
         <argument key="host">localhost</argument>
+        <argument key="port">null</argument>
+        <argument key="user">root</argument>
+        <argument key="password">null</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
       </argument>
@@ -3583,7 +3579,7 @@
       <argument type="service" id="doctrine.debug_data_holder"/>
       <argument type="service" id="debug.stopwatch" on-invalid="null"/>
     </service>
-    <service id=".1_ServiceLocator~GTj81A8" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".1_ServiceLocator~NK3C13." class="Symfony\Component\DependencyInjection\ServiceLocator">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer">
@@ -3775,7 +3771,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\xampp\htdocs\evolve\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -3810,7 +3806,7 @@
     </service>
     <service id="doctrine.orm.default_attribute_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AttributeDriver">
       <argument type="collection">
-        <argument>C:\xampp\htdocs\evolve\src\Entity</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/src/Entity</argument>
       </argument>
       <argument>true</argument>
     </service>
@@ -3869,7 +3865,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>C:\xampp\htdocs\evolve/migrations</argument>
+        <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -4698,7 +4694,7 @@
       <argument type="service" id="twig"/>
       <argument>%data_collector.templates%</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -4741,7 +4737,7 @@
     <service id="twig.extension.code" class="Symfony\Bundle\WebProfilerBundle\Profiler\CodeExtension">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter"/>
-      <argument>C:\xampp\htdocs\evolve</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
@@ -5510,7 +5506,7 @@
         <argument key="docrine" type="service_closure" id="doctrine"/>
       </argument>
     </service>
-    <service id=".service_locator.W43kLzC" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.NqCIHjE" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.y4_Zrx."/>
@@ -5527,7 +5523,7 @@
         <argument key="App\Controller\DashboardController::transaction" type="service_closure" id=".service_locator.fIl9B8h"/>
         <argument key="App\Controller\DashboardController::withdrawal" type="service_closure" id=".service_locator.o6sN0hZ"/>
         <argument key="App\Controller\DashboardController::transfer" type="service_closure" id=".service_locator.Jd1QjVv"/>
-        <argument key="App\Controller\DashboardController::invest" type="service_closure" id=".service_locator.o6sN0hZ"/>
+        <argument key="App\Controller\DashboardController::invest" type="service_closure" id=".service_locator.Jd1QjVv"/>
         <argument key="App\Controller\DashboardController::plan" type="service_closure" id=".service_locator.NilaBYG"/>
         <argument key="App\Controller\DashboardController::plans" type="service_closure" id=".service_locator.fIl9B8h"/>
         <argument key="App\Controller\DashboardController::profile" type="service_closure" id=".service_locator.fIl9B8h"/>
@@ -5547,7 +5543,7 @@
         <argument key="App\Controller\DashboardController:transaction" type="service_closure" id=".service_locator.fIl9B8h"/>
         <argument key="App\Controller\DashboardController:withdrawal" type="service_closure" id=".service_locator.o6sN0hZ"/>
         <argument key="App\Controller\DashboardController:transfer" type="service_closure" id=".service_locator.Jd1QjVv"/>
-        <argument key="App\Controller\DashboardController:invest" type="service_closure" id=".service_locator.o6sN0hZ"/>
+        <argument key="App\Controller\DashboardController:invest" type="service_closure" id=".service_locator.Jd1QjVv"/>
         <argument key="App\Controller\DashboardController:plan" type="service_closure" id=".service_locator.NilaBYG"/>
         <argument key="App\Controller\DashboardController:plans" type="service_closure" id=".service_locator.fIl9B8h"/>
         <argument key="App\Controller\DashboardController:profile" type="service_closure" id=".service_locator.fIl9B8h"/>
@@ -6729,61 +6725,61 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
-      <argument>O0I19GkzSd</argument>
+      <argument>GGivvLqXjL</argument>
       <argument>0</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/app</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>yBFQwkxnHL</argument>
+      <argument>xcXIZwA9CM</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>E48wlHRn0b</argument>
+      <argument>zvpUjlUBkW</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>48MhrwLDuW</argument>
+      <argument>hP-RJHO7W8</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>b8XQueAzAD</argument>
+      <argument>z4mUbQSixA</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.doctrine.orm.default.result.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.doctrine.orm.default.query.recorder_inner" class="Symfony\Component\Cache\Adapter\ArrayAdapter"/>
     <service id="cache.security_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>FnjKun3zTC</argument>
+      <argument>myJDkg7ZrX</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.security_is_granted_attribute_expression_language.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface">
-      <argument>-kMiVN0LX4</argument>
+      <argument>224DV4MRis</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\xampp\htdocs\evolve\var\cache\dev/pools/system</argument>
+      <argument>/Applications/XAMPP/xamppfiles/htdocs/capital/var/cache/dev/pools/system</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -6906,7 +6902,7 @@
     <service id="Knp\Component\Pager\ArgumentAccess\ArgumentAccessInterface" alias="Knp\Component\Pager\ArgumentAccess\RequestArgumentAccess"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.w7.f4fT" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.W43kLzC"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.NqCIHjE"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>

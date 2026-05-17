@@ -130,7 +130,7 @@ $txt = '
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-bottom:25px;padding-top:22px;width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="https://dmgblockchain-invt.com/account/php/images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
 </td>
 </tr>
 </table>
@@ -166,7 +166,7 @@ $txt = '
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-left:40px;padding-right:40px;width:100%;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="https://dmgblockchain-invt.com/account/php/images/Img4_2x.jpg" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="images/Img4_2x.jpg" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
 </td>
 </tr>
 </table>
@@ -310,7 +310,7 @@ $txt = '
 <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
 <tr>
 <td class="pad" style="padding-top:40px;width:100%;padding-right:0px;padding-left:0px;">
-<div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="https://dmgblockchain-invt.com/account/php/images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
+<div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
 </td>
 </tr>
 </table>
@@ -320,10 +320,10 @@ $txt = '
 <div class="alignment" style="text-align:center;">
 <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="208px">
 <tr>
-<td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="https://dmgblockchain-invt.com/account/php/images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="https://dmgblockchain-invt.com/account/php/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="https://dmgblockchain-invt.com/account/php/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
-<td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="https://dmgblockchain-invt.com/account/php/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
+<td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
 </tr>
 </table>
 </div>
@@ -348,7 +348,7 @@ $txt = '
 <td class="pad" style="padding-bottom:30px;padding-left:40px;padding-right:40px;padding-top:20px;">
 <div style="font-family: sans-serif">
 <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
-<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Dmgblockchain Copyright © 2022</span> this is an automatic mail system do not reply</p>
+<p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Apex Capital Copyright © 2022</span> this is an automatic mail system do not reply</p>
 </div>
 </div>
 </td>

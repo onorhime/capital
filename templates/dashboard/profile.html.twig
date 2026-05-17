@@ -195,6 +195,43 @@
             </div>
         </div>
 
+{# start #}
+                <div class="col">
+            <!-- Card -->
+            <div class="card border-0 scroll-mt-3" id="basicInformationSection">
+                <div class="card-header">
+                    <h2 class="h3 mb-0">Referral information</h2>
+                </div>
+
+                <div wire:id="mKwylT4tdmK42xr99jb0" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;mKwylT4tdmK42xr99jb0&quot;,&quot;name&quot;:&quot;user.account-settings.update-profile-info&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;dashboard\/account-settings&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;37706ffb&quot;,&quot;data&quot;:{&quot;name&quot;:&quot;Tester Test&quot;,&quot;email&quot;:&quot;test1234@happ.com&quot;,&quot;phone&quot;:&quot;9897009200202&quot;,&quot;country&quot;:&quot;Poland&quot;,&quot;username&quot;:&quot;testtim1&quot;},&quot;dataMeta&quot;:[],&quot;checksum&quot;:&quot;e31e9e568db63f91fdecc19c99e87454a135d88e2384a71735dc91ef2709fa7a&quot;}}">
+                    <form>
+                        <div class="card-body">
+                            <div class="row mb-4">
+                                <div class="col-lg-3">
+                                    <label for="fullName" class="col-form-label">Referral Link</label>
+                                </div>
+
+                                <div class="col-lg">
+                                    {% set link = app.request.schemeAndHttpHost ~ app.request.basePath ~ "/account/app-register.html?ref=" ~ app.user.id %}
+                                    <input type="text" class="form-control" id="link" name"link" value={{link}} wire:model.defer='name' required readonly>
+                                    <div class="invalid-feedback">Please add your full name</div>
+                                </div>
+                            </div> <!-- / .row -->
+                            <div class="d-flex justify-content-end mt-5">
+                                <button type="button" class="btn btn-primary" onclick="copyLink()">
+                                    <div class="spinner-border spinner-border-sm" role="status" wire:loading>
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    Copy
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+<!-- Livewire Component wire-end:mKwylT4tdmK42xr99jb0 -->            </div>
+        {# end #}
         <div class="col">
             <!-- Card -->
             <div class="card border-0 scroll-mt-3" id="basicInformationSection">
@@ -792,4 +829,21 @@
             </div> #}
         </div>
     </div>
+     <script>
+    function copyLink() {
+    // Get the input field element by its ID
+    var inputField = document.getElementById('link');
+
+    // Select the text in the input field
+    inputField.select();
+    inputField.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the input field
+    document.execCommand("copy");
+
+    // Optionally, you can display a message or give feedback to the user
+    alert("Copied Referral Link: " + inputField.value);
+}
+
+    </script>
 {% endblock %}

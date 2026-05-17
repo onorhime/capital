@@ -13,8 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta content="Webinning" name="author">
         <!-- Theme CSS -->
-        <link rel="stylesheet" href="https://mam.getonlinetrader.pro/protodash/themes/dashly/assets/css/theme.bundle.css" id="stylesheetLTR">
-        <link rel="stylesheet" href="https://mam.getonlinetrader.pro/protodash/themes/dashly/assets/css/theme.rtl.bundle.css" id="stylesheetRTL">
+        <link rel="stylesheet" href="{{ asset('themes/dashly/assets/css/theme.bundle.css') }}" id="stylesheetLTR">
+        <link rel="stylesheet" href="{{ asset('themes/dashly/assets/css/theme.bundle.css') }}" id="stylesheetRTL">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
         <link rel="preload" as="style"
             href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;display=swap">
@@ -109,7 +109,7 @@
             }
         </script>
         <!-- Favicon -->
-        <link rel="icon" href="https://mam.getonlinetrader.pro/protodash/storage/app/public/photos/i6KEyIIzscFVLkNd20fCnXsUesrnIemV3XQN3dt8.png" sizes="any">
+        <link rel="icon" href="{{ asset('wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png') }}" sizes="any">
 
         <!-- Demo script -->
         <script>
@@ -143,7 +143,7 @@
         <!-- Page Title -->
         <title>{% block title %}
             Dashboard
-        {% endblock %}| {{app.user.name}}</title>
+        {% endblock %}| Apex Capital</title>
             <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js" defer></script>
         <style >[wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {display:none;}[wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
     </head>
@@ -199,17 +199,17 @@
                     <!-- Brand -->
                     <a class="navbar-brand" href={{ path('dashboard') }}>
                         <img src={{ asset("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png") }}
-                            class="navbar-brand-img logo-light logo-small" alt="Evolved Blockchain Solutions" width="25"
+                            class="navbar-brand-img logo-light logo-small" alt="Apex Capital" width="25"
                             height="50">
                         <img src={{ asset("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png") }}
-                            class="navbar-brand-img logo-light logo-large" alt="Evolved Blockchain Solutions" width="125"
+                            class="navbar-brand-img logo-light logo-large" alt="Apex Capital" width="125"
                             height="50">
 
                         <img src={{ asset("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png") }}
-                            class="navbar-brand-img logo-dark logo-small" alt="Evolved Blockchain Solutions" width="25"
+                            class="navbar-brand-img logo-dark logo-small" alt="Apex Capital" width="25"
                             height="50">
                         <img src={{ asset("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png") }}
-                            class="navbar-brand-img logo-dark logo-large" alt="Evolved Blockchain Solutions" width="125"
+                            class="navbar-brand-img logo-dark logo-large" alt="Apex Capital" width="125"
                             height="50">
                     </a>
 
@@ -534,7 +534,7 @@
                 <div class="container-fluid mt-4 mb-6 text-muted">
                     <div class="row justify-content-between">
                         <div class="col">
-                            All Rights Reserved &copy; Evolved Blockchain Solutions 2024
+                            All Rights Reserved &copy; Apex Capital 2024
                         </div>
 
                         <div class="col-auto">
@@ -547,7 +547,7 @@
         <!-- JAVASCRIPT-->
         <!-- Theme JS -->
 
-        <script src="https://mam.getonlinetrader.pro/protodash/themes/dashly/assets/js/theme.bundle.js"></script>
+        <script src="{{ asset('themes/dashly/assets/js/theme.bundle.js') }}"></script>
             <script >console.warn("Livewire: The published Livewire assets are out of date See: https://laravel-livewire.com/docs/installation/")</script><script src="/vendor/livewire/livewire.js?id=fe747446aa84856d8b66" data-turbo-eval="false" data-turbolinks-eval="false" ></script><script data-turbo-eval="false" data-turbolinks-eval="false" >window.livewire = new Livewire();window.Livewire = window.livewire;window.livewire_app_url = '';window.livewire_token = '7eTeGODrZvtlzeGeKTcUZjDXp2NYTBjI0tOkAKeh';window.deferLoadingAlpine = function (callback) {window.addEventListener('livewire:load', function () {callback();});};let started = false;window.addEventListener('alpine:initializing', function () {if (! started) {window.livewire.start();started = true;}});document.addEventListener("DOMContentLoaded", function () {if (! started) {window.livewire.start();started = true;}});</script>
         <script src="https://code.jquery.com/jquery-3.7.0.min.js"
             integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
@@ -556,4 +556,3 @@
 
     </html>
 {% endblock %}
-

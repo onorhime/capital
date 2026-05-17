@@ -1,4 +1,4 @@
 framework:
     mailer:
-        dsn: 'smtp://support@evolvedchain.net:jHukNq^bjHwY@mail.blocktechltd.org:465'
+        dsn: '%env(MAILER_DSN)%'
         message_bus: false

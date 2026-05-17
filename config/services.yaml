@@ -10,6 +10,9 @@ services:
     App\Service\EmailSender:
         arguments:
             $mailer: '@Symfony\Component\Mailer\MailerInterface'
+            $mailFromAddress: '%env(MAIL_FROM_ADDRESS)%'
+            $mailFromName: '%env(MAIL_FROM_NAME)%'
+            $mailAdminAddress: '%env(MAIL_ADMIN_ADDRESS)%'
     # default configuration for services in *this* file
     App\EventListener\AuthenticationExceptionListener:
         tags:

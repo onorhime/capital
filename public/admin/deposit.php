@@ -179,7 +179,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-bottom:25px;padding-top:22px;width:100%;padding-right:0px;padding-left:0px;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="https://dmgblockchain-invt.com/account/php/images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="../account/php/images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
                             </td>
                             </tr>
                             </table>
@@ -215,7 +215,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-left:40px;padding-right:40px;width:100%;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="https://dmgblockchain-invt.com/account/php/images/vector.png" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="../account/php/images/vector.png" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
                             </td>
                             </tr>
                             </table>
@@ -248,7 +248,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:10px;padding-left:40px;padding-right:40px;padding-top:10px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 18px; color: #555555; line-height: 1.5;">
-                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 22.5px;"><span style="color:#808389;font-size:15px;">Welcome to Dmgblockchain, DMG is a publicly traded and vertically integrated blockchain and cryptocurrency company that manages, operates, and develops end-to-end digital solutions to monetize the blockchain ecosystem.
+                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 22.5px;"><span style="color:#808389;font-size:15px;">Welcome to Apex Capital, Apex Capital is a publicly traded and vertically integrated blockchain and cryptocurrency company that manages, operates, and develops end-to-end digital solutions to monetize the blockchain ecosystem.
 
                             </span></p>
                             </div>
@@ -327,7 +327,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:32px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-                            <p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 19.2px;"><span style="color:#1aa19c;font-size:38px;"><span style=""><strong><a style="text-decoration:none;color:#1aa19c;" href="dmgblockchain-invt.com/account">View Account</a></strong></span></span></p>
+                            <p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 19.2px;"><span style="color:#1aa19c;font-size:38px;"><span style=""><strong><a style="text-decoration:none;color:#1aa19c;" href="../account/app-login.html">View Account</a></strong></span></span></p>
                             </div>
                             </div>
                             </td>
@@ -365,7 +365,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-top:40px;width:100%;padding-right:0px;padding-left:0px;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="https://dmgblockchain-invt.com/account/php/images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="../account/php/images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
                             </td>
                             </tr>
                             </table>
@@ -375,10 +375,10 @@ if (isset($_POST['approve'])) {
                             <div class="alignment" style="text-align:center;">
                             <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="208px">
                             <tr>
-                            <td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="https://dmgblockchain-invt.com/account/php/images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="https://dmgblockchain-invt.com/account/php/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="https://dmgblockchain-invt.com/account/php/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="https://dmgblockchain-invt.com/account/php/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="../account/php/images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="../account/php/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="../account/php/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="../account/php/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
                             </tr>
                             </table>
                             </div>
@@ -403,7 +403,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:30px;padding-left:40px;padding-right:40px;padding-top:20px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
-                            <p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Dmgblockchain Copyright © 2022</span> this is an automatic mail system do not reply</p>
+                            <p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Apex Capital Copyright © 2022</span> this is an automatic mail system do not reply</p>
                             </div>
                             </div>
                             </td>
@@ -609,7 +609,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-1" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-bottom:25px;padding-top:22px;width:100%;padding-right:0px;padding-left:0px;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="https://dmgblockchain-invt.com/account/php/images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" src="../account/php/images/Companify-Logo.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="I\'m an image" width="149"/></div>
                             </td>
                             </tr>
                             </table>
@@ -645,7 +645,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-left:40px;padding-right:40px;width:100%;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="https://dmgblockchain-invt.com/account/php/images/vector.png" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="I\'m an image" class="big" src="../account/php/images/vector.png" style="display: block; height: auto; border: 0; width: 352px; max-width: 100%;" title="I\'m an image" width="352"/></div>
                             </td>
                             </tr>
                             </table>
@@ -678,7 +678,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:10px;padding-left:40px;padding-right:40px;padding-top:10px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 18px; color: #555555; line-height: 1.5;">
-                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 22.5px;"><span style="color:#808389;font-size:15px;">Welcome to Dmgblockchain, DMG is a publicly traded and vertically integrated blockchain and cryptocurrency company that manages, operates, and develops end-to-end digital solutions to monetize the blockchain ecosystem.
+                            <p style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 22.5px;"><span style="color:#808389;font-size:15px;">Welcome to Apex Capital, Apex Capital is a publicly traded and vertically integrated blockchain and cryptocurrency company that manages, operates, and develops end-to-end digital solutions to monetize the blockchain ecosystem.
                             
                             </span></p>
                             </div>
@@ -757,7 +757,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:32px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
-                            <p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 19.2px;"><span style="color:#1aa19c;font-size:38px;"><span style=""><strong><a style="text-decoration:none;color:#1aa19c;" href="dmgblockchain-invt.com/account">View Account</a></strong></span></span></p>
+                            <p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 19.2px;"><span style="color:#1aa19c;font-size:38px;"><span style=""><strong><a style="text-decoration:none;color:#1aa19c;" href="../account/app-login.html">View Account</a></strong></span></span></p>
                             </div>
                             </div>
                             </td>
@@ -795,7 +795,7 @@ if (isset($_POST['approve'])) {
                             <table border="0" cellpadding="0" cellspacing="0" class="image_block block-2" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
                             <tr>
                             <td class="pad" style="padding-top:40px;width:100%;padding-right:0px;padding-left:0px;">
-                            <div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="https://dmgblockchain-invt.com/account/php/images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
+                            <div align="center" class="alignment" style="line-height:10px"><img alt="Alternate text" src="../account/php/images/Logo-white.png" style="display: block; height: auto; border: 0; width: 149px; max-width: 100%;" title="Alternate text" width="149"/></div>
                             </td>
                             </tr>
                             </table>
@@ -805,10 +805,10 @@ if (isset($_POST['approve'])) {
                             <div class="alignment" style="text-align:center;">
                             <table border="0" cellpadding="0" cellspacing="0" class="social-table" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; display: inline-block;" width="208px">
                             <tr>
-                            <td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="https://dmgblockchain-invt.com/account/php/images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="https://dmgblockchain-invt.com/account/php/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="https://dmgblockchain-invt.com/account/php/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
-                            <td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="https://dmgblockchain-invt.com/account/php/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://www.facebook.com/" target="_blank"><img alt="Facebook" height="32" src="../account/php/images/facebook2x.png" style="display: block; height: auto; border: 0;" title="Facebook" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://twitter.com/" target="_blank"><img alt="Twitter" height="32" src="../account/php/images/twitter2x.png" style="display: block; height: auto; border: 0;" title="Twitter" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://instagram.com/" target="_blank"><img alt="Instagram" height="32" src="../account/php/images/instagram2x.png" style="display: block; height: auto; border: 0;" title="Instagram" width="32"/></a></td>
+                            <td style="padding:0 10px 0 10px;"><a href="https://www.linkedin.com/" target="_blank"><img alt="LinkedIn" height="32" src="../account/php/images/linkedin2x.png" style="display: block; height: auto; border: 0;" title="LinkedIn" width="32"/></a></td>
                             </tr>
                             </table>
                             </div>
@@ -833,7 +833,7 @@ if (isset($_POST['approve'])) {
                             <td class="pad" style="padding-bottom:30px;padding-left:40px;padding-right:40px;padding-top:20px;">
                             <div style="font-family: sans-serif">
                             <div class="" style="font-size: 12px; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
-                            <p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Dmgblockchain Copyright © 2022</span> this is an automatic mail system do not reply</p>
+                            <p style="margin: 0; font-size: 14px; text-align: left; mso-line-height-alt: 16.8px;"><span style="color:#95979c;font-size:12px;">Apex Capital Copyright © 2022</span> this is an automatic mail system do not reply</p>
                             </div>
                             </div>
                             </td>
@@ -900,6 +900,26 @@ if (isset($_POST['approve'])) {
 }
 if (isset($_POST['delete'])) {
     $id = $_POST['id'];
+    $sql = "SELECT * FROM transactions WHERE id = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $transaction = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    if (!empty($transaction)) {
+        $uid = $transaction['0']['uid'];
+        $amount = $transaction['0']['amount'];
+        $name = $transaction['0']['name'];
+        $sql = "SELECT * FROM users WHERE uid = '$uid'";
+        $result = mysqli_query($conn, $sql);
+        $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        if (!empty($user)) {
+            $email = $user['0']['email'];
+            sendmail(
+                apex_mail_message('Deposit Declined', 'Hi '.$name.",\n\nYour deposit request of $".$amount.' was declined. Please contact support for assistance.'),
+                $email,
+                $name,
+                'Deposit Declined'
+            );
+        }
+    }
     $sql = "DELETE FROM transactions WHERE id = '$id'";
     mysqli_query($conn, $sql);
     
@@ -939,7 +959,7 @@ if (isset($_POST['delete'])) {
         <!-- ============================================================== -->
         <!-- <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="index.html">Concept</a>
+                <a class="navbar-brand" href="index.html">Apex Capital</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

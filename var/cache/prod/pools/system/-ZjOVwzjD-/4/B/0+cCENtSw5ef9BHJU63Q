@@ -1,0 +1,93 @@
+<?php //d73cb5d33d50cc0795bde73cbe88dace
+
+return [PHP_INT_MAX, static fn () => \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            'sqlExecutor' => [
+                $o[1],
+            ],
+            'resultSetMapping' => [
+                $o[2],
+            ],
+            'parameterMappings' => [
+                [
+                    'userId' => [
+                        0,
+                    ],
+                    'dpid' => [
+                        1,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            'sqlStatements' => [
+                1 => 'SELECT t0_.id AS id_0, t0_.date AS date_1, t0_.type AS type_2, t0_.amount AS amount_3, t0_.description AS description_4, t0_.image AS image_5, t0_.status AS status_6, t0_.user_id AS user_id_7 FROM transaction t0_ WHERE t0_.user_id = ? AND t0_.id IN (?)',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    't' => 'App\\Entity\\Transaction',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'date_1' => 'date',
+                    'type_2' => 'type',
+                    'amount_3' => 'amount',
+                    'description_4' => 'description',
+                    'image_5' => 'image',
+                    'status_6' => 'status',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'user_id_7' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    't' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'user_id_7' => 'user_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 't',
+                    'date_1' => 't',
+                    'type_2' => 't',
+                    'amount_3' => 't',
+                    'description_4' => 't',
+                    'image_5' => 't',
+                    'status_6' => 't',
+                    'user_id_7' => 't',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Transaction',
+                    'date_1' => 'App\\Entity\\Transaction',
+                    'type_2' => 'App\\Entity\\Transaction',
+                    'amount_3' => 'App\\Entity\\Transaction',
+                    'description_4' => 'App\\Entity\\Transaction',
+                    'image_5' => 'App\\Entity\\Transaction',
+                    'status_6' => 'App\\Entity\\Transaction',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+)];

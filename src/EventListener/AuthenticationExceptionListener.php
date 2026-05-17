@@ -27,12 +27,12 @@ class AuthenticationExceptionListener
 
         if ($exception instanceof AuthenticationException) {
             // Handle AuthenticationException
-            $response = new RedirectResponse('http://express.loc');
+            $response = new RedirectResponse($event->getRequest()->getBasePath() . '/account/app-login.html');
             $event->setResponse($response);
         } elseif ($exception instanceof HttpException) {
             // Handle other HttpExceptions
             $statusCode = $exception->getStatusCode();
-            $response = new RedirectResponse('http://express.loc');
+            $response = new RedirectResponse($event->getRequest()->getBasePath() . '/account/app-login.html');
             $event->setResponse($response);
         }
     }

@@ -84,6 +84,12 @@ class DashboardController extends AbstractController
                 $text = "new deposit request of $$amount from ". $user->getName();
                     
                 $emailSender->sendTransactionMail($text, 'New Deposit Request');
+                $emailSender->sendDepEmail(
+                    $user->getEmail(),
+                    'Deposit Request Received',
+                    'Your deposit request was received',
+                    ['name' => $user->getName(), 'message' => "your deposit request of $$amount has been received and is awaiting confirmation"]
+                );
                 noty()->addSuccess( "Payment Successful Please Wait For Comfirmation!" );
                 return $this->redirectToRoute('dashboard');
            }
@@ -182,6 +188,12 @@ class DashboardController extends AbstractController
                     $text = "new withdrawal request of $$amount from ". $user->getName();
                     
                     $emailSender->sendTransactionMail($text, 'New Withdrawal Request');
+                    $emailSender->sendDepEmail(
+                        $user->getEmail(),
+                        'Withdrawal Request Received',
+                        'Your withdrawal request was received',
+                        ['name' => $user->getName(), 'message' => "your withdrawal request of $$amount has been received and is awaiting confirmation"]
+                    );
                     
                     noty()->addSuccess( "Transfer Successful and Awaiting Confirmation");
                     return $this->redirectToRoute('dashboard');
@@ -203,7 +215,7 @@ class DashboardController extends AbstractController
     }
     
     #[Route('/invest', name: 'invest')]
-    public function invest(ManagerRegistry $doctrine, Request $request): Response
+    public function invest(ManagerRegistry $doctrine, Request $request, EmailSender $emailSender): Response
     {
         $em = $doctrine->getManager();
         if(null !=$request->get('planname')){
@@ -234,6 +246,14 @@ class DashboardController extends AbstractController
                     $em->persist($noti);
 
                     $em->flush();
+                    $text = "new investment of $$amount from ". $user->getName()." in the plan ".strtoupper($request->get('planname'));
+                    $emailSender->sendTransactionMail($text, 'New Investment');
+                    $emailSender->sendDepEmail(
+                        $user->getEmail(),
+                        'Investment Started',
+                        'Your investment was started',
+                        ['name' => $user->getName(), 'message' => "your investment of $".number_format((float)$amount, 2)." in the plan ".strtoupper($request->get('planname'))." has been placed successfully"]
+                    );
 
                     noty()->addSuccess( "Investment Successful");
                     return $this->redirectToRoute('dashboard');
@@ -293,6 +313,6 @@ class DashboardController extends AbstractController
     public function logout(Request $request, ManagerRegistry $doctrine, PaginatorInterface $paginator): Response
     {
        session_destroy();
-       return new RedirectResponse('http://express.loc');
+       return new RedirectResponse($request->getBasePath() . '/account/app-login.html');
     }
 }

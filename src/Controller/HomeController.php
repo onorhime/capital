@@ -42,6 +42,7 @@ class HomeController extends AbstractController
             // Save the image to the server
             
             if(file_put_contents($uploadDirectory . '/' . $filename, $decodedImage)){
+                $referrer = null;
                 $user = new User();
                 $user->setEmail($request->get('email'))
                      ->setName( $request->get('name'))
@@ -57,27 +58,31 @@ class HomeController extends AbstractController
                      ->setRoles(['ROLE_USER'])
                      ->setPassword(htmlspecialchars($request->get('password')));
                      if (null != $this->getRef($request->get('ref'), $doctrine->getRepository(User::class))) {
-                        $user->setReferred($this->getRef( $request->get('ref'), $doctrine->getRepository(User::class)));
-                        $ref = $this->getRef($request->get('ref'), $doctrine->getRepository(User::class));
-                        $ref->addReferral($user);
-                        $em->persist($ref);
+                        $referrer = $this->getRef($request->get('ref'), $doctrine->getRepository(User::class));
+                        $user->setReferred($referrer);
+                        $referrer->addReferral($user);
+                        $em->persist($referrer);
                      }
                      $em->persist($user);
                      $em->flush();
                      $this->loginUserAutomatically($user);
                      $noti = new Notification();
                      $noti->setTitle('welcome On Board')
-                          ->setMessage('Welcome to Evolved Blockchain Solution ')
+                          ->setMessage('Welcome to Apex Capital ')
                           ->setDate(new DateTime())
                           ->setUser($user);
                     $em->persist($noti);
                     $em->flush();
-                    $emailSender->sendRegEmail($request->get('email'), 'Welcome Aboard', 'Welcome to Evolved Blockchain Solution', ['name'=>$request->get('name'), 'message'=>'']);
+                    $emailSender->sendRegEmail($request->get('email'), 'Welcome Aboard', 'Welcome to Apex Capital', ['name'=>$request->get('name'), 'message'=>'']);
+                    if ($referrer !== null) {
+                        $emailSender->sendDepEmail($referrer->getEmail(), 'New Referral', 'You have a new referral', ['name'=>$referrer->getName(), 'message'=>$request->get('name').' just registered with your referral link']);
+                        $emailSender->sendTransactionMail('new referral registration from '.$request->get('name').' referred by '.$referrer->getName(), 'Referral Registration');
+                    }
                      return $this->json(['status'=>'success','message'=>"User Created"]);
 
             }
             } catch (\Throwable $th) {
-                return $this->json(['status'=>'error', 'message' => 'Email Already Exists']);
+                return $this->json(['status'=>'error', 'message' => "Email Already Exists $th"]);
             }
         }
         // return $this->json([
@@ -102,7 +107,7 @@ class HomeController extends AbstractController
     }
 
     #[Route('/login', name: 'login')]
-    public function login(Request $request, ManagerRegistry $docrine): JsonResponse
+    public function login(Request $request, ManagerRegistry $docrine): Response
     {
         if(null != $request->get('email'))
         {
@@ -125,7 +130,7 @@ class HomeController extends AbstractController
             }
         }
         
-        $response = new RedirectResponse('http://express.loc');
+        $response = new RedirectResponse($request->getBasePath() . '/account/app-login.html');
         return $response;
     }
 

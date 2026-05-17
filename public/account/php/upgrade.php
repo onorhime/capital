@@ -8,6 +8,7 @@ $date = date("F j, Y, g:i a");
 
 $uid = $_SESSION['uid'];
 $name = $_SESSION['name'];
+$email = $_SESSION['email'] ?? '';
 $id = uniqid();
 $sql = "INSERT INTO upgrade(uid, name, date) VALUES('$uid','$name', '$date')";
  
@@ -19,5 +20,13 @@ if (mysqli_query($conn, $sql)) {
         "status"=>"success",
         
       ]);
-      sendmail($admmail, "team@dmgblockchain-invt.com", $name, "Upgrade Request");
+      sendmail($admmail, apex_mail_admin_address(), $name, "Upgrade Request");
+      if ($email !== '') {
+        sendmail(
+          apex_mail_message('Upgrade Request Received', 'Hi '.$name.",\n\nYour account upgrade request has been received and is awaiting confirmation."),
+          $email,
+          $name,
+          'Upgrade Request Received'
+        );
+      }
 }

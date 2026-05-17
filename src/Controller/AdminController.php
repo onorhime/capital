@@ -89,7 +89,7 @@ class AdminController extends AbstractController
             $noti->setTitle('Withdrawal Complete')
                 ->setMessage("your withdrawal was confirmed successfully")
                 ->setDate(new DateTime())
-                ->setUser($this->getUser());
+                ->setUser($user);
             $em->persist($noti);
             $em->flush();
             $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Confirmed', "your withdrawal was confirmed successfully", ['name'=>$user->getName(), 'message'=>"your withdrawal of $$amount has been confirmed and deposited to your wallet successfuly"]);
@@ -100,6 +100,8 @@ class AdminController extends AbstractController
         }
         if(null != $request->get('delete')){
             $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id')); 
+            $user = $transaction->getUser();
+            $amount = $transaction->getAmount();
             $transaction->setStatus('declined');
             $em->persist($transaction);
 
@@ -107,9 +109,10 @@ class AdminController extends AbstractController
             $noti->setTitle('Withdrawal Declined')
                 ->setMessage("your withdrawal was declined, please contact support")
                 ->setDate(new DateTime())
-                ->setUser($this->getUser());
+                ->setUser($user);
             $em->persist($noti);
             $em->flush();
+            $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Declined', "your withdrawal was declined", ['name'=>$user->getName(), 'message'=>"your withdrawal request of $$amount was declined. Please contact support for assistance"]);
 
             noty()->addError("wihdrawal was successfuly declined");
             return $this->redirectToRoute('withdrawallist');
@@ -142,7 +145,7 @@ class AdminController extends AbstractController
             $noti->setTitle('Deposit Complete')
                 ->setMessage("your deposit was confirmed successfully")
                 ->setDate(new DateTime())
-                ->setUser($this->getUser());
+                ->setUser($user);
             $em->persist($noti);
             $em->flush();
 
@@ -156,15 +159,18 @@ class AdminController extends AbstractController
         }
         if($request->get('delete')){
             $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id')); 
+            $user = $transaction->getUser();
+            $amount = $transaction->getAmount();
             $transaction->setStatus('declined');
             $em->persist($transaction);
             $noti = new Notification();
             $noti->setTitle('Transaction Decined')
                  ->setMessage("your deposit was declined, please contact support")
                  ->setDate(new DateTime())
-                 ->setUser($this->getUser());
+                 ->setUser($user);
             $em->persist($noti);
             $em->flush();
+            $emailSender->sendDepEmail($user->getEmail(), 'Deposit Declined', "your deposit was declined", ['name'=>$user->getName(), 'message'=>"your deposit request of $$amount was declined. Please contact support for assistance"]);
 
             noty()->addError("deposit was successfuly declined");
             return $this->redirectToRoute('depositlist');

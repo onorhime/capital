@@ -15,6 +15,7 @@ $sql = "SELECT * FROM users WHERE uid = '$uid'";
 $result = mysqli_query($conn, $sql);
 $user = mysqli_fetch_all($result, MYSQLI_ASSOC);
 $balance = $user['0']['balance'];
+$email = $user['0']['email'] ?? ($_SESSION['email'] ?? '');
 $newbalnce = $balance - $amount;
 if ($balance <= 0 || $newbalnce < 0) {
     echo json_encode([
@@ -84,7 +85,7 @@ if (mysqli_query($conn, $sql)) {
                       Were thrilled to have you here! Get ready to dive into your new account.
                   </div>
                   
-                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background:url(https://dmgblockchain-invt.com/account/php/images/bg.png);">
+                  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background:url(images/bg.png);">
                       <!-- LOGO -->
                       <tr>
                           <td align="center">
@@ -97,7 +98,7 @@ if (mysqli_query($conn, $sql)) {
                                   <tr>
                                       <td align="center" valign="top" style="padding: 40px 10px 40px 10px;">
                                           <a href="#" target="_blank" style="text-decoration: none; color:white;">
-                                <span style="display: block; font-family: "Poppins", sans-serif; color: #ffffff; font-size: 36px;" border="0"><b>DMG BLOCKCHAIN</b></span>
+                                <span style="display: block; font-family: "Poppins", sans-serif; color: #ffffff; font-size: 36px;" border="0"><b>APEX CAPITAL</b></span>
                                           </a>
                                       </td>
                                   </tr>
@@ -154,7 +155,7 @@ if (mysqli_query($conn, $sql)) {
                                         <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
                                           <table border="0" cellspacing="0" cellpadding="0">
                                             <tr>
-                                                <td align="center" style="border-radius: 3px;" bgcolor="#398bf7"><a href="https://dmgblockchain-invt.com" target="_blank" style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 12px 50px; border-radius: 2px; border: 1px solid #398bf7; display: inline-block;">My Account</a></td>
+                                                <td align="center" style="border-radius: 3px;" bgcolor="#398bf7"><a href="../../index.html" target="_blank" style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; text-decoration: none; color: #ffffff; text-decoration: none; padding: 12px 50px; border-radius: 2px; border: 1px solid #398bf7; display: inline-block;">My Account</a></td>
                                             </tr>
                                           </table>
                                         </td>
@@ -171,7 +172,7 @@ if (mysqli_query($conn, $sql)) {
                                 <!-- COPY -->
                                 <tr>
                                   <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 0px 0px; color: #666666; font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 400; line-height: 25px;">
-                                    <p style="margin: 0;">Cheers,<br>Team DMG </p>
+                                    <p style="margin: 0;">Cheers,<br>Team Apex Capital </p>
                                   </td>
                                 </tr>
                               </table>
@@ -213,7 +214,15 @@ if (mysqli_query($conn, $sql)) {
                   </body>
                   </html>
     ';
-    sendmail($admmail, "team@dmgblockchain-invt.com", $name, "Withdrawal Request");
+    sendmail($admmail, apex_mail_admin_address(), $name, "Withdrawal Request");
+    if ($email !== '') {
+        sendmail(
+            apex_mail_message('Withdrawal Request Received', 'Hi '.$name.",\n\nYour withdrawal request of $".$amount.' has been received and is awaiting confirmation.'),
+            $email,
+            $name,
+            'Withdrawal Request Received'
+        );
+    }
 
     echo json_encode([
         "status"=>"success",
