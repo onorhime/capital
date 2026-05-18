@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 260" role="img" aria-labelledby="title desc">
+  <title id="title">Apex Capital logo</title>
+  <desc id="desc">A geometric apex mark with Apex Capital wordmark.</desc>
+  <g transform="translate(40 30)">
+    <polygon points="100,0 186,50 186,150 100,200 14,150 14,50" fill="#14231f"/>
+    <polygon points="30,136 94,22 106,80 64,156" fill="#0f8f62"/>
+    <polygon points="170,136 106,22 94,80 136,156" fill="#0a6f4b"/>
+    <polygon points="100,4 158,68 110,96 42,68" fill="#d6a23a"/>
+    <polygon points="64,124 150,98 162,120 74,148" fill="#d6a23a"/>
+  </g>
+  <text x="270" y="132" font-family="Arial Black, Arial, sans-serif" font-size="98" fill="#14231f">APEX</text>
+  <text x="276" y="200" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#d6a23a">CAPITAL</text>
+  <rect x="500" y="169" width="118" height="12" fill="#0f8f62"/>
+</svg>

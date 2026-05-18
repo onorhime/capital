@@ -1,6 +1,6 @@
 /* ============================================================
    Capital theme override — pulls public/ pages toward the
-   dashboard's Dashly accent palette (teal primary, navy text).
+   Apex Capital palette (emerald primary, charcoal text, gold accent).
 
    IMPORTANT: every rule below is scoped with html:not([data-theme])
    so it does NOT apply on dashboard pages (Dashly puts data-theme
@@ -12,24 +12,25 @@
    ============================================================ */
 
 html:not([data-theme]) {
-    --capital-primary:       #00bac7;
-    --capital-primary-hover: #009ea9;
-    --capital-dark:          #0e2238;
-    --capital-bg:            #f8fafb;
+    --capital-primary:       #0f8f62;
+    --capital-primary-hover: #0a6f4b;
+    --capital-dark:          #14231f;
+    --capital-bg:            #f7f4ee;
+    --capital-accent:        #d6a23a;
 }
 
 /* Bootstrap variables (only on non-dashboard pages) */
 html:not([data-theme]) :root,
 html:not([data-theme]) {
-    --bs-primary:        #00bac7 !important;
-    --bs-primary-rgb:    0, 186, 199 !important;
-    --bs-dark:           #0e2238 !important;
-    --bs-dark-rgb:       14, 34, 56 !important;
-    --bs-secondary:      #9ea9b4 !important;
-    --bs-success:        #31cf80 !important;
-    --bs-info:           #2dadcf !important;
-    --bs-warning:        #ebcf4f !important;
-    --bs-danger:         #d82c5b !important;
+    --bs-primary:        #0f8f62 !important;
+    --bs-primary-rgb:    15, 143, 98 !important;
+    --bs-dark:           #14231f !important;
+    --bs-dark-rgb:       20, 35, 31 !important;
+    --bs-secondary:      #8f8a7e !important;
+    --bs-success:        #24a66a !important;
+    --bs-info:           #7f8d7a !important;
+    --bs-warning:        #d6a23a !important;
+    --bs-danger:         #b9413f !important;
 }
 
 /* Links */
@@ -40,6 +41,20 @@ html:not([data-theme]) a:visited {
 html:not([data-theme]) a:hover,
 html:not([data-theme]) a:focus {
     color: var(--capital-primary-hover) !important;
+}
+
+/* Old inline link/button blues from exported forms */
+html:not([data-theme]) [style*="color:rgb(46, 163, 242)"],
+html:not([data-theme]) [style*="color: rgb(46, 163, 242)"],
+html:not([data-theme]) [style*="color:#2ea3f2"],
+html:not([data-theme]) [style*="color: #2ea3f2"] {
+    color: var(--capital-primary) !important;
+}
+
+html:not([data-theme]) [style*="background-color:rgb(0, 124, 137)"],
+html:not([data-theme]) [style*="background-color: rgb(0, 124, 137)"] {
+    background-color: var(--capital-primary) !important;
+    border-color: var(--capital-primary) !important;
 }
 
 /* Bootstrap-style buttons / badges */
@@ -75,12 +90,12 @@ html:not([data-theme]) input:focus,
 html:not([data-theme]) textarea:focus,
 html:not([data-theme]) select:focus {
     border-color: var(--capital-primary) !important;
-    box-shadow: 0 0 0 0.25rem rgba(0, 186, 199, 0.25) !important;
+    box-shadow: 0 0 0 0.25rem rgba(15, 143, 98, 0.25) !important;
 }
 
 /* ---------- Divi marketing site (inline-style backgrounds) ---------- */
 
-/* Deep blues / dark blues → navy */
+/* Deep blues / dark blues -> charcoal */
 html:not([data-theme]) [style*="#00001e"],
 html:not([data-theme]) [style*="#020381"],
 html:not([data-theme]) [style*="#0c1560"],
@@ -96,11 +111,87 @@ html:not([data-theme]) [style*="#080808"] {
     border-color: var(--capital-dark) !important;
 }
 
-/* Purples / accents → teal */
+/* Purples / old cool accents -> emerald */
 html:not([data-theme]) [style*="#7e3bd0"],
 html:not([data-theme]) [style*="#8da9db"] {
     background-color: var(--capital-primary) !important;
     border-color: var(--capital-primary) !important;
+}
+
+/* Divi page-builder CSS often stores colors in cached <style> blocks,
+   not element style attributes, so these selectors override those blocks. */
+html:not([data-theme]) .et_pb_section_0.et_pb_section,
+html:not([data-theme]) .et_pb_section_2.et_pb_section,
+html:not([data-theme]) .et_pb_section_6.et_pb_section,
+html:not([data-theme]) .et_pb_section_8.et_pb_section,
+html:not([data-theme]) .et_pb_section_10.et_pb_section {
+    background-color: var(--capital-primary) !important;
+}
+
+html:not([data-theme]) .et_pb_section_2.et_pb_section:hover {
+    background-color: var(--capital-primary-hover) !important;
+}
+
+html:not([data-theme]) .et_pb_section_3.et_pb_section,
+html:not([data-theme]) .et_pb_section_5.et_pb_section,
+html:not([data-theme]) .et_pb_section_9.et_pb_section,
+html:not([data-theme]) .rmp-container,
+html:not([data-theme]) .rmp-menu-wrap {
+    background-color: var(--capital-dark) !important;
+}
+
+html:not([data-theme]) div.et_pb_section.et_pb_section_1 {
+    background-image: linear-gradient(90deg, #fff 54%, var(--capital-dark) 54%) !important;
+}
+
+html:not([data-theme]) .et_pb_image_5 {
+    background-image: linear-gradient(180deg, var(--capital-accent) 0%, var(--capital-primary-hover) 89%) !important;
+}
+
+html:not([data-theme]) .et_pb_text_0,
+html:not([data-theme]) .et_pb_text_1,
+html:not([data-theme]) .et_pb_text_2,
+html:not([data-theme]) .et_pb_text_3,
+html:not([data-theme]) .et_pb_text_4,
+html:not([data-theme]) .et_pb_text_5,
+html:not([data-theme]) .et_pb_text_6,
+html:not([data-theme]) .et_pb_text_7,
+html:not([data-theme]) .et_pb_text_8,
+html:not([data-theme]) .et_pb_text_9,
+html:not([data-theme]) .et_pb_text_10,
+html:not([data-theme]) .et_pb_text_11,
+html:not([data-theme]) .et_pb_text_12,
+html:not([data-theme]) .et_pb_text_13,
+html:not([data-theme]) .et_pb_text_14,
+html:not([data-theme]) .et_pb_text_15,
+html:not([data-theme]) .et_pb_text_16,
+html:not([data-theme]) .et_pb_text_17,
+html:not([data-theme]) .et_pb_text_18,
+html:not([data-theme]) .et_pb_text_19,
+html:not([data-theme]) .et_pb_text_20,
+html:not([data-theme]) .et_pb_text_21,
+html:not([data-theme]) .et_pb_text_22,
+html:not([data-theme]) .et_pb_text_23,
+html:not([data-theme]) .et_pb_text_24,
+html:not([data-theme]) .et_pb_text_25,
+html:not([data-theme]) .et_pb_text_26,
+html:not([data-theme]) .et_pb_text_27,
+html:not([data-theme]) .et_pb_text_28,
+html:not([data-theme]) .et_pb_text_29,
+html:not([data-theme]) .et_pb_text_30,
+html:not([data-theme]) .et_pb_text_31,
+html:not([data-theme]) .et_pb_text_32,
+html:not([data-theme]) .et_pb_text_33,
+html:not([data-theme]) .et_pb_text_34,
+html:not([data-theme]) .et_pb_text_35,
+html:not([data-theme]) .et_pb_text_36,
+html:not([data-theme]) .et_pb_text_37,
+html:not([data-theme]) .et_pb_text_38,
+html:not([data-theme]) .et_pb_text_39,
+html:not([data-theme]) .et_pb_text_40,
+html:not([data-theme]) .et_pb_text_41,
+html:not([data-theme]) .et_pb_text_42 {
+    border-bottom-color: #d8c690 !important;
 }
 
 /* Divi buttons */
@@ -174,12 +265,12 @@ html:not([data-theme]) [id^="rmp-menu-wrap"] .rmp-menu-current-item .rmp-menu-it
 
 /* ============================================================
    Auth pages (public/account/*) — purple Mobikit theme.
-   Replace the bright purple primary (#6236FF) with teal.
+   Replace the bright purple primary (#0f8f62) with emerald.
    ============================================================ */
 
 /* Primary purple buttons + accents → teal */
-html:not([data-theme]) [style*="#6236FF"],
-html:not([data-theme]) [style*="#6236ff"],
+html:not([data-theme]) [style*="#0f8f62"],
+html:not([data-theme]) [style*="#0f8f62"],
 html:not([data-theme]) .btn-primary,
 html:not([data-theme]) .text-primary,
 html:not([data-theme]) .bg-primary {
@@ -187,7 +278,7 @@ html:not([data-theme]) .bg-primary {
 }
 
 /* Mobikit auth-form specific selectors — extra specificity boost
-   to beat `.btn-primary { background: #6236FF !important }` etc. */
+   to beat `.btn-primary { background: #0f8f62 !important }` etc. */
 html:not([data-theme]) body .btn.btn-primary,
 html:not([data-theme]) body button.btn-primary,
 html:not([data-theme]) body a.btn-primary,
