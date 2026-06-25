@@ -63,9 +63,6 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
 ";
         // line 531
         yield from $this->unwrap()->yieldBlock('footer', $context, $blocks);
-        // line 559
-        yield "
-";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -239,9 +236,7 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
         // line 144
         yield from $this->unwrap()->yieldBlock('title', $context, $blocks);
         // line 146
-        yield "| ";
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 146, $this->source); })()), "user", [], "any", false, false, false, 146), "name", [], "any", false, false, false, 146), "html", null, true);
-        yield "</title>
+        yield "| Apex Capital</title>
             <script src=\"https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js\" defer></script>
         <style >[wire\\:loading], [wire\\:loading\\.delay], [wire\\:loading\\.inline-block], [wire\\:loading\\.inline], [wire\\:loading\\.block], [wire\\:loading\\.flex], [wire\\:loading\\.table], [wire\\:loading\\.grid], [wire\\:loading\\.inline-flex] {display: none;}[wire\\:loading\\.delay\\.shortest], [wire\\:loading\\.delay\\.shorter], [wire\\:loading\\.delay\\.short], [wire\\:loading\\.delay\\.long], [wire\\:loading\\.delay\\.longer], [wire\\:loading\\.delay\\.longest] {display:none;}[wire\\:offline] {display: none;}[wire\\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
     </head>
@@ -343,26 +338,26 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
         // line 201
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png"), "html", null, true);
         yield "
-                            class=\"navbar-brand-img logo-light logo-small\" alt=\"Evolved Blockchain Solutions\" width=\"25\"
+                            class=\"navbar-brand-img logo-light logo-small\" alt=\"Apex Capital\" width=\"25\"
                             height=\"50\">
                         <img src=";
         // line 204
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png"), "html", null, true);
         yield "
-                            class=\"navbar-brand-img logo-light logo-large\" alt=\"Evolved Blockchain Solutions\" width=\"125\"
+                            class=\"navbar-brand-img logo-light logo-large\" alt=\"Apex Capital\" width=\"125\"
                             height=\"50\">
 
                         <img src=";
         // line 208
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png"), "html", null, true);
         yield "
-                            class=\"navbar-brand-img logo-dark logo-small\" alt=\"Evolved Blockchain Solutions\" width=\"25\"
+                            class=\"navbar-brand-img logo-dark logo-small\" alt=\"Apex Capital\" width=\"25\"
                             height=\"50\">
                         <img src=";
         // line 211
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png"), "html", null, true);
         yield "
-                            class=\"navbar-brand-img logo-dark logo-large\" alt=\"Evolved Blockchain Solutions\" width=\"125\"
+                            class=\"navbar-brand-img logo-dark logo-large\" alt=\"Apex Capital\" width=\"125\"
                             height=\"50\">
                     </a>
 
@@ -800,7 +795,7 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
                 <div class=\"container-fluid mt-4 mb-6 text-muted\">
                     <div class=\"row justify-content-between\">
                         <div class=\"col\">
-                            All Rights Reserved &copy; Evolved Blockchain Solutions 2024
+                            All Rights Reserved &copy; Apex Capital 2024
                         </div>
 
                         <div class=\"col-auto\">
@@ -821,6 +816,18 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
         <script src=\"https://code.jquery.com/jquery-3.7.0.min.js\"
             integrity=\"sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js\"></script>
+        <!-- Smartsupp Live Chat script -->
+        <script type=\"text/javascript\">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'e852fdce38c629a5866f770f0bea76449d4055a6';
+        window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
+        <noscript>Powered by <a href=\"https://www.smartsupp.com\" target=\"_blank\">Smartsupp</a></noscript>
         </body>
 
     </html>
@@ -847,7 +854,7 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
      */
     public function getDebugInfo()
     {
-        return array (  818 => 550,  798 => 532,  788 => 531,  776 => 528,  766 => 527,  745 => 517,  739 => 514,  735 => 513,  725 => 506,  719 => 503,  703 => 490,  699 => 489,  688 => 481,  684 => 480,  680 => 479,  662 => 463,  652 => 455,  650 => 454,  647 => 453,  644 => 425,  640 => 423,  621 => 411,  617 => 410,  612 => 407,  608 => 405,  602 => 403,  600 => 402,  595 => 401,  593 => 400,  588 => 399,  585 => 398,  582 => 396,  579 => 395,  576 => 394,  573 => 393,  570 => 391,  567 => 390,  564 => 388,  561 => 387,  558 => 385,  555 => 384,  552 => 382,  545 => 376,  541 => 375,  538 => 374,  534 => 372,  532 => 371,  507 => 349,  380 => 225,  363 => 211,  357 => 208,  350 => 204,  344 => 201,  340 => 200,  293 => 155,  283 => 154,  271 => 145,  261 => 144,  242 => 146,  240 => 144,  205 => 112,  107 => 17,  103 => 16,  79 => 3,  67 => 559,  65 => 531,  62 => 530,  60 => 527,  58 => 154,  55 => 153,  53 => 3,  49 => 1,);
+        return array (  813 => 550,  793 => 532,  783 => 531,  771 => 528,  761 => 527,  740 => 517,  734 => 514,  730 => 513,  720 => 506,  714 => 503,  698 => 490,  694 => 489,  683 => 481,  679 => 480,  675 => 479,  657 => 463,  647 => 455,  645 => 454,  642 => 453,  639 => 425,  635 => 423,  616 => 411,  612 => 410,  607 => 407,  603 => 405,  597 => 403,  595 => 402,  590 => 401,  588 => 400,  583 => 399,  580 => 398,  577 => 396,  574 => 395,  571 => 394,  568 => 393,  565 => 391,  562 => 390,  559 => 388,  556 => 387,  553 => 385,  550 => 384,  547 => 382,  540 => 376,  536 => 375,  533 => 374,  529 => 372,  527 => 371,  502 => 349,  375 => 225,  358 => 211,  352 => 208,  345 => 204,  339 => 201,  335 => 200,  288 => 155,  278 => 154,  266 => 145,  256 => 144,  239 => 146,  237 => 144,  202 => 112,  104 => 17,  100 => 16,  76 => 3,  65 => 531,  62 => 530,  60 => 527,  58 => 154,  55 => 153,  53 => 3,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -997,7 +1004,7 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
         <!-- Page Title -->
         <title>{% block title %}
             Dashboard
-        {% endblock %}| {{app.user.name}}</title>
+        {% endblock %}| Apex Capital</title>
             <script src=\"https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.1/dist/alpine.min.js\" defer></script>
         <style >[wire\\:loading], [wire\\:loading\\.delay], [wire\\:loading\\.inline-block], [wire\\:loading\\.inline], [wire\\:loading\\.block], [wire\\:loading\\.flex], [wire\\:loading\\.table], [wire\\:loading\\.grid], [wire\\:loading\\.inline-flex] {display: none;}[wire\\:loading\\.delay\\.shortest], [wire\\:loading\\.delay\\.shorter], [wire\\:loading\\.delay\\.short], [wire\\:loading\\.delay\\.long], [wire\\:loading\\.delay\\.longer], [wire\\:loading\\.delay\\.longest] {display:none;}[wire\\:offline] {display: none;}[wire\\:dirty]:not(textarea):not(input):not(select) {display: none;}input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {animation-duration: 50000s;animation-name: livewireautofill;}@keyframes livewireautofill { from {} }</style>
     </head>
@@ -1053,17 +1060,17 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
                     <!-- Brand -->
                     <a class=\"navbar-brand\" href={{ path('dashboard') }}>
                         <img src={{ asset(\"wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png\") }}
-                            class=\"navbar-brand-img logo-light logo-small\" alt=\"Evolved Blockchain Solutions\" width=\"25\"
+                            class=\"navbar-brand-img logo-light logo-small\" alt=\"Apex Capital\" width=\"25\"
                             height=\"50\">
                         <img src={{ asset(\"wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png\") }}
-                            class=\"navbar-brand-img logo-light logo-large\" alt=\"Evolved Blockchain Solutions\" width=\"125\"
+                            class=\"navbar-brand-img logo-light logo-large\" alt=\"Apex Capital\" width=\"125\"
                             height=\"50\">
 
                         <img src={{ asset(\"wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png\") }}
-                            class=\"navbar-brand-img logo-dark logo-small\" alt=\"Evolved Blockchain Solutions\" width=\"25\"
+                            class=\"navbar-brand-img logo-dark logo-small\" alt=\"Apex Capital\" width=\"25\"
                             height=\"50\">
                         <img src={{ asset(\"wp-content/uploads/2021/06/Text-Monochrome-on-dark-blue.png\") }}
-                            class=\"navbar-brand-img logo-dark logo-large\" alt=\"Evolved Blockchain Solutions\" width=\"125\"
+                            class=\"navbar-brand-img logo-dark logo-large\" alt=\"Apex Capital\" width=\"125\"
                             height=\"50\">
                     </a>
 
@@ -1388,7 +1395,7 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
                 <div class=\"container-fluid mt-4 mb-6 text-muted\">
                     <div class=\"row justify-content-between\">
                         <div class=\"col\">
-                            All Rights Reserved &copy; Evolved Blockchain Solutions 2024
+                            All Rights Reserved &copy; Apex Capital 2024
                         </div>
 
                         <div class=\"col-auto\">
@@ -1406,11 +1413,22 @@ class __TwigTemplate_20493bb658e463398fdfd18ea12339ca extends Template
         <script src=\"https://code.jquery.com/jquery-3.7.0.min.js\"
             integrity=\"sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=\" crossorigin=\"anonymous\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js\"></script>
+        <!-- Smartsupp Live Chat script -->
+        <script type=\"text/javascript\">
+        var _smartsupp = _smartsupp || {};
+        _smartsupp.key = 'e852fdce38c629a5866f770f0bea76449d4055a6';
+        window.smartsupp||(function(d) {
+          var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+          s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+          c.type='text/javascript';c.charset='utf-8';c.async=true;
+          c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+        })(document);
+        </script>
+        <noscript>Powered by <a href=\"https://www.smartsupp.com\" target=\"_blank\">Smartsupp</a></noscript>
         </body>
 
     </html>
 {% endblock %}
-
 ", "base.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/capital/templates/base.html.twig");
     }
 }

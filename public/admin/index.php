@@ -1,4 +1,10 @@
 <?php
+$scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '/admin'));
+$basePath = preg_replace('#/admin$#', '', rtrim($scriptDir, '/'));
+
+header('Location: ' . ($basePath ?: '') . '/backend/');
+exit;
+
 ob_start();
 require("../account/php/db.php");
 require("../mail.php");

@@ -244,7 +244,7 @@ class __TwigTemplate_724660607161fb0b87f7df6fa6d7d270 extends Template
                                 <div class=\"col-lg\">
                                     ";
         // line 215
-        $context["link"] = ("https://evolvedchain.net/account/app-register.html?ref=" . CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 215, $this->source); })()), "user", [], "any", false, false, false, 215), "id", [], "any", false, false, false, 215));
+        $context["link"] = (((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 215, $this->source); })()), "request", [], "any", false, false, false, 215), "schemeAndHttpHost", [], "any", false, false, false, 215) . CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 215, $this->source); })()), "request", [], "any", false, false, false, 215), "basePath", [], "any", false, false, false, 215)) . "/account/app-register.html?ref=") . CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 215, $this->source); })()), "user", [], "any", false, false, false, 215), "id", [], "any", false, false, false, 215));
         // line 216
         yield "                                    <input type=\"text\" class=\"form-control\" id=\"link\" name\"link\" value=";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["link"]) || array_key_exists("link", $context) ? $context["link"] : (function () { throw new RuntimeError('Variable "link" does not exist.', 216, $this->source); })()), "html", null, true);
@@ -1036,7 +1036,7 @@ class __TwigTemplate_724660607161fb0b87f7df6fa6d7d270 extends Template
                                 </div>
 
                                 <div class=\"col-lg\">
-                                    {% set link = \"https://evolvedchain.net/account/app-register.html?ref=\"~ app.user.id %}
+                                    {% set link = app.request.schemeAndHttpHost ~ app.request.basePath ~ \"/account/app-register.html?ref=\" ~ app.user.id %}
                                     <input type=\"text\" class=\"form-control\" id=\"link\" name\"link\" value={{link}} wire:model.defer='name' required readonly>
                                     <div class=\"invalid-feedback\">Please add your full name</div>
                                 </div>
@@ -1670,6 +1670,7 @@ class __TwigTemplate_724660607161fb0b87f7df6fa6d7d270 extends Template
 }
 
     </script>
-{% endblock %}", "dashboard/profile.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/capital/templates/dashboard/profile.html.twig");
+{% endblock %}
+", "dashboard/profile.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/capital/templates/dashboard/profile.html.twig");
     }
 }

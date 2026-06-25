@@ -28,10 +28,24 @@ class HomeController extends AbstractController
         if (null != $request->get('email')) {
             try {
              $em = $doctrine->getManager();
+             if (null !== $doctrine->getRepository(User::class)->findOneBy(['email' => $request->get('email')])) {
+                return $this->json(['status'=>'error', 'message' => 'Email Already Exists']);
+             }
+
              $imageData = $request->request->get('file');
+             if (!is_string($imageData) || $imageData === '') {
+                return $this->json(['status'=>'error', 'message' => 'Facial Verification image is required']);
+             }
+
+             if (str_contains($imageData, ',')) {
+                $imageData = substr($imageData, strpos($imageData, ',') + 1);
+             }
 
             // Decode the base64 string into binary data
-            $decodedImage = base64_decode($imageData);
+            $decodedImage = base64_decode($imageData, true);
+            if ($decodedImage === false) {
+                return $this->json(['status'=>'error', 'message' => 'Invalid Facial Verification image']);
+            }
 
             // Generate a unique filename for the uploaded image
             $filename = md5(uniqid()) . '.png';
@@ -73,18 +87,27 @@ class HomeController extends AbstractController
                           ->setUser($user);
                     $em->persist($noti);
                     $em->flush();
-                    $emailSender->sendRegEmail($request->get('email'), 'Welcome Aboard', 'Welcome to Apex Capital', ['name'=>$request->get('name'), 'message'=>'']);
-                    if ($referrer !== null) {
-                        $emailSender->sendDepEmail($referrer->getEmail(), 'New Referral', 'You have a new referral', ['name'=>$referrer->getName(), 'message'=>$request->get('name').' just registered with your referral link']);
-                        $emailSender->sendTransactionMail('new referral registration from '.$request->get('name').' referred by '.$referrer->getName(), 'Referral Registration');
+                    if ($this->getParameter('kernel.environment') !== 'dev') {
+                        try {
+                            $emailSender->sendRegEmail($request->get('email'), 'Welcome Aboard', 'Welcome to Apex Capital', ['name'=>$request->get('name'), 'message'=>'']);
+                            if ($referrer !== null) {
+                                $emailSender->sendDepEmail($referrer->getEmail(), 'New Referral', 'You have a new referral', ['name'=>$referrer->getName(), 'message'=>$request->get('name').' just registered with your referral link']);
+                                $emailSender->sendTransactionMail('new referral registration from '.$request->get('name').' referred by '.$referrer->getName(), 'Referral Registration');
+                            }
+                        } catch (\Throwable $mailError) {
+                            error_log($mailError->getMessage());
+                        }
                     }
                      return $this->json(['status'=>'success','message'=>"User Created"]);
 
             }
+            return $this->json(['status'=>'error', 'message' => 'Unable to save Facial Verification image']);
             } catch (\Throwable $th) {
-                return $this->json(['status'=>'error', 'message' => "Email Already Exists $th"]);
+                error_log($th->getMessage());
+                return $this->json(['status'=>'error', 'message' => 'Unable to create user. Please try again.']);
             }
         }
+        return $this->json(['status'=>'error', 'message' => 'Email is required']);
         // return $this->json([
         //     'message' => 'Welcome to your new controller!',
         //     'path' => 'src/Controller/HomeController.php',
@@ -113,9 +136,9 @@ class HomeController extends AbstractController
         {
             $user = $docrine->getRepository(User::class)->findOneBy(['email' => $request->get('email')]);
             if(null != $user){
-                $path = '/dashboard';
+                $path = $this->generateUrl('dashboard');
                 if (in_array('ROLE_ADMIN' ,$user->getRoles()) ){
-                    $path = '/admin';
+                    $path = $this->generateUrl('admin');
                 }
                 $password = $user->getPassword();
                 if (htmlspecialchars($request->get('password')) == $password) {

@@ -289,9 +289,6 @@
       <tag name="controller.service_arguments"/>
       <tag name="routing.route_loader"/>
     </service>
-    <service id="App\Service\EmailSender" class="App\Service\EmailSender" autowire="true" autoconfigure="true">
-      <tag name="container.error" message="Cannot autowire service &quot;App\Service\EmailSender&quot;: argument &quot;$mailFromAddress&quot; of method &quot;__construct()&quot; is type-hinted &quot;string&quot;, you should configure its value explicitly."/>
-    </service>
     <service id="App\EventListener\AuthenticationExceptionListener" class="App\EventListener\AuthenticationExceptionListener" autowire="true" autoconfigure="true">
       <argument type="service" id="router.default"/>
     </service>
@@ -334,6 +331,13 @@
     <service id="App\Repository\UserRepository" class="App\Repository\UserRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Security\LoginEntryPoint" class="App\Security\LoginEntryPoint" autowire="true" autoconfigure="true"/>
+    <service id="App\Service\EmailSender" class="App\Service\EmailSender" autowire="true" autoconfigure="true">
+      <argument type="service" id="mailer.mailer"/>
+      <argument>%env(MAIL_FROM_ADDRESS)%</argument>
+      <argument>%env(MAIL_FROM_NAME)%</argument>
+      <argument>%env(MAIL_ADMIN_ADDRESS)%</argument>
     </service>
     <service id="argument_metadata_factory" class="Symfony\Component\HttpKernel\ControllerMetadata\ArgumentMetadataFactory"/>
     <service id="argument_resolver.backed_enum_resolver" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\BackedEnumValueResolver">
@@ -4222,7 +4226,7 @@
     </service>
     <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
       <call method="add">
-        <argument type="service" id=".security.request_matcher.28NqKnb"/>
+        <argument type="service" id=".security.request_matcher.YvX_kny"/>
         <argument type="collection">
           <argument>ROLE_ADMIN</argument>
         </argument>
@@ -4574,7 +4578,7 @@
       <argument>false</argument>
       <argument>security.user.provider.concrete.app_user_provider</argument>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument>App\Security\LoginEntryPoint</argument>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="collection"/>
@@ -4633,7 +4637,7 @@
       <argument type="service" id="security.authentication.trust_resolver"/>
       <argument type="service" id="security.http_utils"/>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument type="service" id="App\Security\LoginEntryPoint"/>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="logger" on-invalid="null"/>
@@ -4658,12 +4662,12 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.obhk0jm" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
-      <argument>^/admin</argument>
+    <service id=".security.request_matcher.oUxK9S." class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">
+      <argument>^/backend</argument>
     </service>
-    <service id=".security.request_matcher.28NqKnb" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
+    <service id=".security.request_matcher.YvX_kny" class="Symfony\Component\HttpFoundation\ChainRequestMatcher">
       <argument type="collection">
-        <argument type="service" id=".security.request_matcher.obhk0jm"/>
+        <argument type="service" id=".security.request_matcher.oUxK9S."/>
       </argument>
     </service>
     <service id=".security.request_matcher.J6VGRO9" class="Symfony\Component\HttpFoundation\RequestMatcher\PathRequestMatcher">

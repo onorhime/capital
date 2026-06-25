@@ -14,10 +14,10 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/admin' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, true, false, null]],
-        '/admin/withdrawallist' => [[['_route' => 'withdrawallist', '_controller' => 'App\\Controller\\AdminController::withdrawals'], null, null, null, false, false, null]],
-        '/admin/depositlist' => [[['_route' => 'depositlist', '_controller' => 'App\\Controller\\AdminController::deposits'], null, null, null, false, false, null]],
-        '/admin/investments' => [[['_route' => 'investments', '_controller' => 'App\\Controller\\AdminController::investments'], null, null, null, false, false, null]],
+        '/backend' => [[['_route' => 'admin', '_controller' => 'App\\Controller\\AdminController::index'], null, null, null, true, false, null]],
+        '/backend/withdrawallist' => [[['_route' => 'withdrawallist', '_controller' => 'App\\Controller\\AdminController::withdrawals'], null, null, null, false, false, null]],
+        '/backend/depositlist' => [[['_route' => 'depositlist', '_controller' => 'App\\Controller\\AdminController::deposits'], null, null, null, false, false, null]],
+        '/backend/investments' => [[['_route' => 'investments', '_controller' => 'App\\Controller\\AdminController::investments'], null, null, null, false, false, null]],
         '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\DashboardController::index'], null, null, null, true, false, null]],
         '/dashboard/deposit' => [[['_route' => 'deposit', '_controller' => 'App\\Controller\\DashboardController::deposit'], null, null, null, false, false, null]],
         '/dashboard/payment' => [[['_route' => 'payment', '_controller' => 'App\\Controller\\DashboardController::payment'], null, null, null, false, false, null]],
@@ -51,10 +51,10 @@ return [
                         .')'
                     .')'
                 .')'
-                .'|/admin/profile/([^/]++)(*:225)'
+                .'|/backend/profile/([^/]++)(*:227)'
                 .'|/dashboard/(?'
-                    .'|transfer/([^/]++)(*:264)'
-                    .'|plan/([^/]++)(*:285)'
+                    .'|transfer/([^/]++)(*:266)'
+                    .'|plan/([^/]++)(*:287)'
                 .')'
             .')/?$}sDu',
     ],
@@ -67,9 +67,9 @@ return [
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        225 => [[['_route' => 'profileview', '_controller' => 'App\\Controller\\AdminController::profile'], ['id'], null, null, false, true, null]],
-        264 => [[['_route' => 'transfer', '_controller' => 'App\\Controller\\DashboardController::transfer'], ['mode'], null, null, false, true, null]],
-        285 => [
+        227 => [[['_route' => 'profileview', '_controller' => 'App\\Controller\\AdminController::profile'], ['id'], null, null, false, true, null]],
+        266 => [[['_route' => 'transfer', '_controller' => 'App\\Controller\\DashboardController::transfer'], ['mode'], null, null, false, true, null]],
+        287 => [
             [['_route' => 'plan', '_controller' => 'App\\Controller\\DashboardController::plan'], ['plan'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

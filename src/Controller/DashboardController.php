@@ -103,13 +103,13 @@ class DashboardController extends AbstractController
             $address = "";
             switch($request->get('method')) {
                 case "btc":
-                    $address = "1E5nRg7WwNJ8iagCEYjkpH3GyLfyUkaePh";
+                    $address = "bc1qty3eu4zgzslms0xgm36lj55t807j4w7fkpemne";
                     break;
                 case "eth":
-                    $address = "0x4Cd80465D93921fa4A22FA7530d858bbAe70a907";
+                    $address = "0xd679663043E463DD25A0022d84816FC587DCe1c5";
                     break;
                 case "usdt":
-                    $address = "THmw6gby5c2bMhqvtuQmeJmikXALa2PJyi";
+                    $address = "TSsYRDob8EpyoGe4CVrxch3mMBddfjNJ9A";
                     break;  
                 default:
                     $address = "Invalid Wallet Selected";

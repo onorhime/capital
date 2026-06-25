@@ -219,9 +219,22 @@ class __TwigTemplate_0dfb1c1bc416f70af9f75d407994c339 extends Template
         // line 98
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/assets/libs/js/dashboard-ecommerce.js"), "html", null, true);
         yield "></script>
+    <!-- Smartsupp Live Chat script -->
+    <script type=\"text/javascript\">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'e852fdce38c629a5866f770f0bea76449d4055a6';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+    <noscript>Powered by <a href=\"https://www.smartsupp.com\" target=\"_blank\">Smartsupp</a></noscript>
 </body>
  
-</html>";
+</html>
+";
         
         $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
 
@@ -274,7 +287,7 @@ class __TwigTemplate_0dfb1c1bc416f70af9f75d407994c339 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  245 => 71,  235 => 70,  220 => 98,  216 => 97,  212 => 96,  208 => 95,  203 => 93,  199 => 92,  194 => 90,  189 => 88,  184 => 86,  179 => 84,  174 => 82,  169 => 80,  160 => 73,  158 => 70,  143 => 58,  135 => 53,  128 => 49,  121 => 45,  114 => 41,  87 => 17,  83 => 16,  79 => 15,  75 => 14,  71 => 13,  67 => 12,  63 => 11,  59 => 10,  55 => 9,  45 => 1,);
+        return array (  258 => 71,  248 => 70,  220 => 98,  216 => 97,  212 => 96,  208 => 95,  203 => 93,  199 => 92,  194 => 90,  189 => 88,  184 => 86,  179 => 84,  174 => 82,  169 => 80,  160 => 73,  158 => 70,  143 => 58,  135 => 53,  128 => 49,  121 => 45,  114 => 41,  87 => 17,  83 => 16,  79 => 15,  75 => 14,  71 => 13,  67 => 12,  63 => 11,  59 => 10,  55 => 9,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -377,8 +390,21 @@ class __TwigTemplate_0dfb1c1bc416f70af9f75d407994c339 extends Template
     <script src={{ asset(\"admin/assets/vendor/charts/c3charts/d3-5.4.0.min.js\")}}></script>
     <script src={{ asset(\"admin/assets/vendor/charts/c3charts/C3chartjs.js\")}}></script>
     <script src={{ asset(\"admin/assets/libs/js/dashboard-ecommerce.js\")}}></script>
+    <!-- Smartsupp Live Chat script -->
+    <script type=\"text/javascript\">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = 'e852fdce38c629a5866f770f0bea76449d4055a6';
+    window.smartsupp||(function(d) {
+      var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+      s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+      c.type='text/javascript';c.charset='utf-8';c.async=true;
+      c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+    })(document);
+    </script>
+    <noscript>Powered by <a href=\"https://www.smartsupp.com\" target=\"_blank\">Smartsupp</a></noscript>
 </body>
  
-</html>", "adminbase.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/capital/templates/adminbase.html.twig");
+</html>
+", "adminbase.html.twig", "/Applications/XAMPP/xamppfiles/htdocs/capital/templates/adminbase.html.twig");
     }
 }

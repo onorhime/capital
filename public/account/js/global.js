@@ -2,6 +2,13 @@
 var imageurl;
 var ref = "";
 var urlParams;
+function apiPath(path) {
+  var accountPath = "/account/";
+  var accountIndex = window.location.pathname.indexOf(accountPath);
+  var basePath = accountIndex === -1 ? "" : window.location.pathname.substring(0, accountIndex);
+
+  return basePath + path;
+}
 (window.onpopstate = function () {
     var match,
         pl     = /\+/g,  // Regex for replacing addition symbol with a space
@@ -84,7 +91,7 @@ function register(e) {
     if (name != "" && email!=""&&pass!=""&&pass1!=""&&pass==pass1) {
         document.getElementById("submit").innerHTML = "Creating Account...";
 
-    $.post("/register",
+    $.post(apiPath("/register"),
     {
       name: name,
       email: email,
@@ -119,6 +126,18 @@ function register(e) {
       }else{
         document.getElementById("submit").innerHTML = "Register";
       }
+    }).fail(function(){
+      document.getElementById("loader2").classList.add('hidden');
+      document.getElementById("submit").removeAttribute("disabled");
+      document.getElementById("submit").innerHTML = "Register";
+      Swal.fire(
+        {
+            icon: 'error',
+            title: 'Error Creating Account',
+            text: 'Registration request failed. Check that localhost is pointing to the Symfony public folder.',
+            background: '#000'
+          }
+      )
     });
     document.getElementById("submit").removeAttribute("disabled");
     }else{
@@ -162,7 +181,7 @@ function login() {
     document.getElementById("loginb").innerHTML = "Verifying Acount...";
 
 
-    $.post("/login",
+    $.post(apiPath("/login"),
     {
       email: email,
       password: pass,
@@ -187,6 +206,17 @@ function login() {
       }else{
         document.getElementById("loginb").innerHTML = "Continue";
       }
+    }).fail(function(){
+      Swal.fire(
+        {
+            icon: 'error',
+            title: 'Error',
+            text: 'Login request failed. Check that localhost is pointing to the Symfony public folder.',
+            background: '#000'
+          }
+      )
+      document.getElementById("loginb").removeAttribute("disabled");
+      document.getElementById("loginb").innerHTML = "Log in";
     });
 
 }

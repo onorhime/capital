@@ -44,8 +44,8 @@
                         </div>
                     </div>
                     <!-- Title -->
-                    <h3 class="card-title mt-3 mb-0 text-dark">{{method|upper}}</h3>
-                    <span class="text-muted m-0 p-0">Pay via {{method}}</span>
+                    <h3 class="card-title mt-3 mb-0 text-dark">{{ method == 'usdt' ? 'USDT' : method|upper }}</h3>
+                    <span class="text-muted m-0 p-0">Pay via {{ method == 'usdt' ? 'USDT TRC20' : method }}</span>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                                     </div>
                                                                             <small class="d-block mt-1">
                                             <strong>Network Type:</strong>
-                                            {{method}}
+                                            {{ method == 'usdt' ? 'TRC20' : method|upper }}
                                         </small>
                                                                     </div>
                                 <button type="button" class="btn btn-primary mt-5" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
