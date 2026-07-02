@@ -8,8 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LegacyAdminController extends AbstractController
 {
-    #[Route('/admin', name: 'legacy_admin_redirect')]
-    #[Route('/admin/', name: 'legacy_admin_redirect_slash')]
+    #[Route('/admin/', name: 'legacy_admin_redirect')]
     public function __invoke(): RedirectResponse
     {
         return $this->redirectToRoute('admin');
