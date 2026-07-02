@@ -56,16 +56,33 @@ class DashboardController extends AbstractController
         if($request->get('_tokenp')){
            try {
             $em = $doctrine->getManager();
-            $user = $doctrine->getRepository(User::class)->find($this->getUser());
+            $user = $this->getUser();
+            if (!$user instanceof User) {
+                throw new \RuntimeException('Unable to load user account.');
+            }
+            $amount = $this->parsePositiveAmount($request->get('amount'));
+            if ($amount === null) {
+                noty()->addError('Please enter a valid deposit amount.');
+                return $this->redirectToRoute('deposit');
+            }
+            $method = strtolower((string) $request->get('method'));
+            if (!in_array($method, ['btc', 'eth', 'usdt'], true)) {
+                noty()->addError('Please select a valid payment method.');
+                return $this->redirectToRoute('deposit');
+            }
             $image = $request->files->get('proof');
+            if ($image === null) {
+                noty()->addError('Please upload payment proof.');
+                return $this->redirectToRoute('deposit');
+            }
             $uploadsDirectory = $this->getParameter('upload_directory');
-            $filename = $image->getClientOriginalName();
+            $originalName = preg_replace('/[^A-Za-z0-9._-]/', '_', $image->getClientOriginalName());
+            $filename = bin2hex(random_bytes(8)) . '_' . ($originalName ?: 'proof');
            if($image->move($uploadsDirectory, $filename)){
                 $transaction = new Transaction();
-                $method =  $request->get('method');
                 $transaction->setDate(new DateTime())
-                            ->setUser( $this->getUser() )
-                            ->setAmount( floatval($request->get('amount')) )
+                            ->setUser( $user )
+                            ->setAmount( $amount )
                             ->setType("deposit")
                             ->setDescription("Deposit via $method")
                             ->setImage($filename)
@@ -76,20 +93,22 @@ class DashboardController extends AbstractController
                 $noti->setDate(new DateTime())
                      ->setTitle( "New Deposit" )
                      ->setMessage("Deposit has been received and it's being processed")
-                     ->setUser( $this->getUser() );
+                     ->setUser( $user );
                 $em->persist( $noti );
 
                 $em->flush();
-                $amount =  $request->get('amount');
                 $text = "new deposit request of $$amount from ". $user->getName();
-                    
-                $emailSender->sendTransactionMail($text, 'New Deposit Request');
-                $emailSender->sendDepEmail(
-                    $user->getEmail(),
-                    'Deposit Request Received',
-                    'Your deposit request was received',
-                    ['name' => $user->getName(), 'message' => "your deposit request of $$amount has been received and is awaiting confirmation"]
-                );
+                try {
+                    $emailSender->sendTransactionMail($text, 'New Deposit Request');
+                    $emailSender->sendDepEmail(
+                        $user->getEmail(),
+                        'Deposit Request Received',
+                        'Your deposit request was received',
+                        ['name' => $user->getName(), 'message' => "your deposit request of $$amount has been received and is awaiting confirmation"]
+                    );
+                } catch (\Throwable $mailError) {
+                    error_log($mailError->getMessage());
+                }
                 noty()->addSuccess( "Payment Successful Please Wait For Comfirmation!" );
                 return $this->redirectToRoute('dashboard');
            }
@@ -100,8 +119,13 @@ class DashboardController extends AbstractController
            }
         }
         if ($request->get('method')) {
-            $address = "";
-            switch($request->get('method')) {
+            $amount = $this->parsePositiveAmount($request->get('amount'));
+            if ($amount === null) {
+                noty()->addError('Please enter a valid deposit amount.');
+                return $this->redirectToRoute('deposit');
+            }
+            $method = strtolower((string) $request->get('method'));
+            switch($method) {
                 case "btc":
                     $address = "bc1qty3eu4zgzslms0xgm36lj55t807j4w7fkpemne";
                     break;
@@ -112,18 +136,18 @@ class DashboardController extends AbstractController
                     $address = "TSsYRDob8EpyoGe4CVrxch3mMBddfjNJ9A";
                     break;  
                 default:
-                    $address = "Invalid Wallet Selected";
+                    noty()->addError('Please select a valid payment method.');
+                    return $this->redirectToRoute('deposit');
                 }
             return $this->render('dashboard/payment.html.twig', [
                 'path' => 'deposit',
-                'amount' => $request->get('amount'),
-                'method' => $request->get('method'),
+                'amount' => $amount,
+                'method' => $method,
                 'address' => $address
             ]);
         }
 
-       
-        
+        return $this->redirectToRoute('deposit');
     }
 
     #[Route('/transaction', name: 'transaction')]
@@ -164,38 +188,49 @@ class DashboardController extends AbstractController
         $em = $doctrine->getManager();
         if(null != $request->get('amount')){
             try {
-                $amount  = $request->get('amount');
-                $user = $doctrine->getRepository(User::class)->find($this->getUser());
+                $amount = $this->parsePositiveAmount($request->get('amount'));
+                if ($amount === null) {
+                    noty()->addError('Please enter a valid withdrawal amount.');
+                    return $this->redirectToRoute('transfer', ['mode' => $mode]);
+                }
+                $user = $this->getUser();
+                if (!$user instanceof User) {
+                    throw new \RuntimeException('Unable to load user account.');
+                }
                 if ($user->getBalance() >= $amount) {
                     $user->setBalance( $user->getBalance() - $amount);
                     $em->persist($user);
                     $details = $request->get('details');
                     $transaction = new Transaction();
-                    $transaction->setAmount(floatval($request->get('amount')))
-                                ->setType("Transfer")
+                    $transaction->setAmount($amount)
+                                ->setType("withdrawal")
                                 ->setDate(new DateTime())
-                                ->setDescription($request->get('details'))
+                                ->setDescription("Withdraw via $mode to wallet: $details")
                                 ->setStatus('pending')
-                                ->setUser($this->getUser());
+                                ->setUser($user);
                     $em->persist($transaction);
                     $noti = new Notification();
-                    $noti->setTitle('New Transfer')
-                        ->setMessage("New Tranfer of $$amount  has been made by you to wallet: $details")
+                    $noti->setTitle('New Withdrawal')
+                        ->setMessage("New withdrawal of $$amount has been requested by you to wallet: $details")
                         ->setDate(new DateTime())
-                        ->setUser($this->getUser());
+                        ->setUser($user);
                     $em->persist($noti);
                     $em->flush();
                     $text = "new withdrawal request of $$amount from ". $user->getName();
                     
-                    $emailSender->sendTransactionMail($text, 'New Withdrawal Request');
-                    $emailSender->sendDepEmail(
-                        $user->getEmail(),
-                        'Withdrawal Request Received',
-                        'Your withdrawal request was received',
-                        ['name' => $user->getName(), 'message' => "your withdrawal request of $$amount has been received and is awaiting confirmation"]
-                    );
+                    try {
+                        $emailSender->sendTransactionMail($text, 'New Withdrawal Request');
+                        $emailSender->sendDepEmail(
+                            $user->getEmail(),
+                            'Withdrawal Request Received',
+                            'Your withdrawal request was received',
+                            ['name' => $user->getName(), 'message' => "your withdrawal request of $$amount has been received and is awaiting confirmation"]
+                        );
+                    } catch (\Throwable $mailError) {
+                        error_log($mailError->getMessage());
+                    }
                     
-                    noty()->addSuccess( "Transfer Successful and Awaiting Confirmation");
+                    noty()->addSuccess( "Withdrawal request submitted and awaiting confirmation");
                     return $this->redirectToRoute('dashboard');
                 }else{
                     noty()->addError("Insufficient Balance");
@@ -212,6 +247,17 @@ class DashboardController extends AbstractController
             'path' => 'withdraw',
             'mode'=> $mode
         ]);
+    }
+
+    private function parsePositiveAmount(mixed $amount): ?float
+    {
+        if (!is_numeric($amount)) {
+            return null;
+        }
+
+        $amount = (float) $amount;
+
+        return $amount > 0 ? $amount : null;
     }
     
     #[Route('/invest', name: 'invest')]

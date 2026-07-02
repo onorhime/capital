@@ -25,7 +25,7 @@ class AdminController extends AbstractController
     {
         $users = $doctrine->getRepository(User::class)->findAll();
         $deposits = $doctrine->getRepository(Transaction::class)->findBy(["type"=>"deposit", "status"=>"pending"]);
-        $withdrawals = $doctrine->getRepository(Transaction::class)->findBy(["type"=>"withdrawal", "status"=>"pending"]);
+        $withdrawals = $doctrine->getRepository(Transaction::class)->findBy(["type"=>["withdrawal", "Transfer"], "status"=>"pending"]);
         $plans = $doctrine->getRepository(Plan::class)->findBy(['complete'=> false]);
 
         return $this->render('admin/index.html.twig', [
@@ -71,17 +71,22 @@ class AdminController extends AbstractController
     #[Route('/withdrawallist', name: 'withdrawallist')]
     public function withdrawals(ManagerRegistry $doctrine, HttpFoundationRequest $request, EmailSender $emailSender): Response
     {
-        $withdrawals = $doctrine->getRepository(Transaction::class)->findBy(["type"=>"withdrawal", "status"=>"pending"]);
+        $withdrawals = $doctrine->getRepository(Transaction::class)->findBy(["type"=>["withdrawal", "Transfer"], "status"=>"pending"]);
 
         $em = $doctrine->getManager();
         if(null != $request->get('approve')){
-            $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id'));
+            $transaction = $this->findPendingTransaction($doctrine, $request->get('id'), 'withdrawal');
+            if ($transaction === null) {
+                noty()->addError("Withdrawal request was not found or has already been processed");
+                return $this->redirectToRoute('withdrawallist');
+            }
             $transaction->setStatus('approved');
+            $transaction->setType('withdrawal');
             $em->persist($transaction);
             $user = $transaction->getUser();
             
             $amount = $transaction->getAmount();
-            $user->setTotalWithdrawal( $user->getTotalWithdrawal() + $amount );
+            $user->setTotalwithdrawal( (float) $user->getTotalwithdrawal() + $amount );
             $em->persist($user);
             $em->flush();
 
@@ -92,17 +97,28 @@ class AdminController extends AbstractController
                 ->setUser($user);
             $em->persist($noti);
             $em->flush();
-            $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Confirmed', "your withdrawal was confirmed successfully", ['name'=>$user->getName(), 'message'=>"your withdrawal of $$amount has been confirmed and deposited to your wallet successfuly"]);
+            try {
+                $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Confirmed', "your withdrawal was confirmed successfully", ['name'=>$user->getName(), 'message'=>"your withdrawal of $$amount has been confirmed and deposited to your wallet successfuly"]);
+            } catch (\Throwable $mailError) {
+                error_log($mailError->getMessage());
+            }
             
             noty()->addSuccess("wihdrawal was successfuly approved");
             return $this->redirectToRoute('withdrawallist');
             
         }
         if(null != $request->get('delete')){
-            $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id')); 
+            $transaction = $this->findPendingTransaction($doctrine, $request->get('id'), 'withdrawal');
+            if ($transaction === null) {
+                noty()->addError("Withdrawal request was not found or has already been processed");
+                return $this->redirectToRoute('withdrawallist');
+            }
             $user = $transaction->getUser();
             $amount = $transaction->getAmount();
+            $user->setBalance((float) $user->getBalance() + $amount);
+            $em->persist($user);
             $transaction->setStatus('declined');
+            $transaction->setType('withdrawal');
             $em->persist($transaction);
 
             $noti = new Notification();
@@ -112,13 +128,14 @@ class AdminController extends AbstractController
                 ->setUser($user);
             $em->persist($noti);
             $em->flush();
-            $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Declined', "your withdrawal was declined", ['name'=>$user->getName(), 'message'=>"your withdrawal request of $$amount was declined. Please contact support for assistance"]);
+            try {
+                $emailSender->sendDepEmail($user->getEmail(), 'Withdrawal Declined', "your withdrawal was declined", ['name'=>$user->getName(), 'message'=>"your withdrawal request of $$amount was declined. Please contact support for assistance"]);
+            } catch (\Throwable $mailError) {
+                error_log($mailError->getMessage());
+            }
 
             noty()->addError("wihdrawal was successfuly declined");
             return $this->redirectToRoute('withdrawallist');
-            $em->flush();
-
-            return $this->redirectToRoute('admin');
         }
         return $this->render('admin/withdrawals.html.twig', [
             'withdrawals' => $withdrawals
@@ -130,12 +147,16 @@ class AdminController extends AbstractController
     {
         $em = $doctrine->getManager();
         if(null != $request->get('approve')){
-            $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id'));
+            $transaction = $this->findPendingTransaction($doctrine, $request->get('id'), 'deposit');
+            if ($transaction === null) {
+                noty()->addError("Deposit request was not found or has already been processed");
+                return $this->redirectToRoute('depositlist');
+            }
             $user = $transaction->getUser();
             
             $amount = $transaction->getAmount();
-            $user->setBalance($user->getBalance() + $amount)
-                 ->setTotalDeposit( $user->getTotalDeposit() + $amount );
+            $user->setBalance((float) $user->getBalance() + $amount)
+                 ->setTotaldeposit( (float) $user->getTotaldeposit() + $amount );
             $em->persist($user);
             $transaction->setStatus('approved');
             $em->persist($transaction);
@@ -149,7 +170,11 @@ class AdminController extends AbstractController
             $em->persist($noti);
             $em->flush();
 
-            $emailSender->sendDepEmail($user->getEmail(), 'Deposit Confirmed', "your deposit was confirmed successfully", ['name'=>$user->getName(), 'message'=>"your deposit of $$amount has been confirmed and deposited to your account successfuly"]);
+            try {
+                $emailSender->sendDepEmail($user->getEmail(), 'Deposit Confirmed', "your deposit was confirmed successfully", ['name'=>$user->getName(), 'message'=>"your deposit of $$amount has been confirmed and deposited to your account successfuly"]);
+            } catch (\Throwable $mailError) {
+                error_log($mailError->getMessage());
+            }
                    
 
             noty()->addSuccess("deposit was successfuly approved");
@@ -158,7 +183,11 @@ class AdminController extends AbstractController
             
         }
         if($request->get('delete')){
-            $transaction = $doctrine->getRepository(Transaction::class)->find($request->get('id')); 
+            $transaction = $this->findPendingTransaction($doctrine, $request->get('id'), 'deposit');
+            if ($transaction === null) {
+                noty()->addError("Deposit request was not found or has already been processed");
+                return $this->redirectToRoute('depositlist');
+            }
             $user = $transaction->getUser();
             $amount = $transaction->getAmount();
             $transaction->setStatus('declined');
@@ -170,7 +199,11 @@ class AdminController extends AbstractController
                  ->setUser($user);
             $em->persist($noti);
             $em->flush();
-            $emailSender->sendDepEmail($user->getEmail(), 'Deposit Declined', "your deposit was declined", ['name'=>$user->getName(), 'message'=>"your deposit request of $$amount was declined. Please contact support for assistance"]);
+            try {
+                $emailSender->sendDepEmail($user->getEmail(), 'Deposit Declined', "your deposit was declined", ['name'=>$user->getName(), 'message'=>"your deposit request of $$amount was declined. Please contact support for assistance"]);
+            } catch (\Throwable $mailError) {
+                error_log($mailError->getMessage());
+            }
 
             noty()->addError("deposit was successfuly declined");
             return $this->redirectToRoute('depositlist');
@@ -182,6 +215,19 @@ class AdminController extends AbstractController
         return $this->render('admin/deposits.html.twig', [
             'deposits' => $deposits
         ]);
+    }
+
+    private function findPendingTransaction(ManagerRegistry $doctrine, mixed $id, string $type): ?Transaction
+    {
+        $transaction = $doctrine->getRepository(Transaction::class)->find($id);
+
+        if (!$transaction instanceof Transaction || $transaction->getStatus() !== 'pending') {
+            return null;
+        }
+
+        $validTypes = $type === 'withdrawal' ? ['withdrawal', 'Transfer'] : [$type];
+
+        return in_array($transaction->getType(), $validTypes, true) ? $transaction : null;
     }
 
     
